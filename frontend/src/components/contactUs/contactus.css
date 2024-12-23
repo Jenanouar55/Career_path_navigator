@@ -1,0 +1,58 @@
+.contact_us{
+    background-image: url(../../assets/images/contact_us_image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+    bottom: 0;
+    
+}
+
+.contact_us .contact_us_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    position: absolute;
+    right: 7%;
+    border: 1px solid white;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    width: 30%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.315);
+    padding: 2%;
+}
+
+.contact_us .contact_us_text h1{
+    font-size: 3vw;
+    margin-bottom: 0;
+}
+
+.contact_us .contact_us_text h4{
+    font-size: 2vw;
+    margin-top: 0;
+    color: rgba(187, 52, 187, 0.829);
+}
+
+.contact_us .contact_us_text p{
+    font-size: 1.5vw;
+    
+}
+
+.contact_us .contact_us_text a{
+    text-decoration: none;
+    font-size: 2vw;
+    color: rgb(19, 18, 18);
+    padding: 2%;
+    width: 50%;
+    margin-left: 23%;
+}
+
+.contact_us .contact_us_text a:hover{
+    background-color: rgba(187, 52, 187, 0.829);
+    padding: 2%;
+    border-radius: 10px;
+    color: white;
+}

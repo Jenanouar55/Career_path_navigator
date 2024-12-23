@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(8, 8, 8);
     
 }
 
 .services .header_services{
     
-    color: black;
+    color: white;
 }
 
 .services .header_services h1{
@@ -29,6 +30,7 @@
     font-size: 2.3vw;
     flex-wrap: wrap;
     margin: 0 10%;
+    padding-bottom: 6%;
 }
 
 .services .services_section h5{
