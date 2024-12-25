@@ -1,0 +1,108 @@
+.about-us-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .about-hero {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .about-section {
+    margin-bottom: 40px;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: center;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .about-section ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+    margin: 0;
+    gap: 20px;
+  }
+  
+  .about-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .about-section ul li strong {
+    color: #333;
+  }
+  
+  .team-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-member {
+    text-align: center;
+    max-width: 250px;
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #777;
+  }
+  .team-member1{
+    text-align: center;
+    max-width: 200px;
+  }
+  .team-member1 img{
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .team-member1 h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .team-member1 p {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    color: #777;
+  }
+  

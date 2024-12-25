@@ -1,6 +1,6 @@
 import Hero from "../components/hero/hero"
 import Services from "../components/Services/Services"
-import AboutUs from "../components/aboutus/AboutUs"
+import AboutUs from "../components/AboutUs/AboutUs";
 import Contactus from "../components/contactUs/contactus"
 import React from 'react'
 
