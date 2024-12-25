@@ -1,0 +1,92 @@
+.interestForm{
+    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    text-align: center;
+    margin: 8vh 10vw;
+    height: auto;
+    /* max-width: 20%; */
+    padding: 0.5vw;
+    padding-bottom: 2vh;
+
+}
+
+.interestForm h2{
+    padding-top: 10%;
+    color: rgba(187, 52, 187, 0.829);
+    margin-bottom: 2%;
+}
+
+
+
+select{
+
+    padding: 1vw;
+    width: 30vw;
+    margin: 5% 2%;
+    
+
+}
+select:hover{
+    cursor: pointer;
+}
+option:hover{
+    cursor: pointer;
+}
+.submit{
+    /* background-color: rgba(187, 52, 187, 0.829); */
+    background-color: gray;
+    
+    font-weight: 900;
+    padding: 3% 0;
+    width: 30%;
+    margin: 13% auto;
+    /* margin: 4% 37%; */
+    border-radius: 50px;
+    
+}
+
+.submit:hover{
+    background-color: rgba(187, 52, 187, 0.829);
+    cursor: pointer;
+}
+.underline{
+    border: 3px solid rgba(187, 52, 187, 0.829);
+    width: 13vw;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 0;
+}
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    padding: 4% 10vw;
+    border-radius: 10px;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+.profile h5{
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 80%;
+    color: #777575;
+}
+
+@media (max-width: 768px) {
+    .interestForm{
+        height: auto;
+        margin: 5vh;
+        
+    }
+
+    select{
+        width: 70%;
+
+    
+    }
+}

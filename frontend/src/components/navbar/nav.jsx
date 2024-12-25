@@ -19,9 +19,11 @@ const NavBar = () => {
                 <Link to="/AboutUs">About Us</Link>
                 <Link to="/Services">Services</Link>
                 <Link to="/ContactUs">Contact Us</Link>
-                <Link to="/LoginSignup" state={{action:"Login"}}>Login</Link>
-                <Link to="/LoginSignup" state={{action:"Sign Up"}}>Sign Up</Link>
+                {/* <Link to="/Login" state={{action:"Login"}}>Login</Link> */}
+                <Link to="/Signin" state={{action:"Sign Up"}}>Sign In</Link>
+                
             </div>
+
         </nav>
 
     </div>

@@ -1,12 +1,25 @@
 import React, { useState } from 'react'
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa'
 import "./LoginSignup.css"
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const LoginSignup = () => {
   const location = useLocation()
   const state = location.state?.action || "Sign Up"
   const [action, setAction] = useState(state);
+  const navigate = useNavigate();
+
+  function handleSignUp() {
+    console.log("Sign Up Successful")
+
+    setAction('Login')
+  }
+
+  function handleLogin() {
+    console.log('Login Successful')
+
+    navigate('/Interests', {replace: true})
+  }
   return (
 
     <div className='login-signup-body'>
@@ -25,7 +38,8 @@ const LoginSignup = () => {
           <div className="input">
             <FaUser className='custom-icon'/>
             <input type="text" placeholder='Name' />
-          </div>) }
+          </div>) 
+          }
         
           
           <div className="input">
@@ -46,8 +60,11 @@ const LoginSignup = () => {
         }
 
         <div className="submit-container">
-          <div className={action==="Sign Up" ? "signup" : "signup gray"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-          <div className={action==="Login" ? "login" : "login gray"} onClick={()=>{setAction("Login")}}>Login</div>
+          <div className={action==="Sign Up" ? "signup" : "signup gray"} 
+          onClick={handleSignUp}>Sign Up</div>
+
+          <div className={action==="Login" ? "login" : "login gray"} 
+          onClick={handleLogin}>Login</div>
         </div>
       </div>
 
