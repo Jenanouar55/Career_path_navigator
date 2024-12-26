@@ -113,18 +113,41 @@
     gap: 2vw;
 
 }
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+  }
 
- .signup, .login{
-    background-color: rgba(187, 52, 187, 0.829);
-    padding: 2% 5%;
-    white-space: nowrap;
-    border-radius: 20px;
-    color: white;
-    font-size: 130%;
-    font-weight: 600;
-    margin: 2%;
-    cursor: pointer;
+.toggle-btn {
+    padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
 }
+.submit-btn {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 25px; /* Ajout d'une marge pour l'espacement */
+  }
+  .toggle-container-bottom {
+    position: fixed; /* Fixe le bouton en bas de la fenêtre */
+    bottom: 20px; /* Distance depuis le bas */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Centre exact */
+    margin-top: 20px; /* Ajout d'espace entre les boutons */
+    text-align: center;
+  }
+
+
+
 
 .gray{
     background-color: #ccc;
@@ -141,20 +164,17 @@
         margin: 8vw;
     }
       
-
-    .container .inputs .input{
-        
-    }
     
-    .container .inputs .input input{
+    /* .container .inputs .input input{
         padding: 3% 10vw;
         margin: 0 1vw;
         /* width: 50vw; */
         /* height: 4vh; */
-        border: none;
+       /* border: none;
         outline: none;
         color: transparent;
         background-color: #ccc;
     }
+     */
 }
 
