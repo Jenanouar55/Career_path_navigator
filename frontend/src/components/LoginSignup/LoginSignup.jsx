@@ -8,6 +8,7 @@ const LoginSignup = () => {
   const location = useLocation();
   const state = location.state?.action || "Sign Up";
   const [action, setAction] = useState(state);
+  
 
   // Form data state
   const [formData, setFormData] = useState({
@@ -55,11 +56,17 @@ const LoginSignup = () => {
       setError(error.response?.data?.message || "Something went wrong. Please try again.");
     }
   };
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    
+    navigate('/Interests')
+  }
 
   return (
-    <div className="login-signup-body">
-      <div className="curve1"></div>
-      <div className="curve2"></div>
+     <div className="login-signup-body">
+       {/* <div className="curve1"></div>
+       <div className="curve2"></div> */}
 
       <div className="container">
         <div className="header">
@@ -106,7 +113,7 @@ const LoginSignup = () => {
 
         {action === "Login" && (
           <div className="forgot-password">
-            Forgot Password? <a href="#">Click Here</a>
+            Forgot Password? <a href="">Click Here</a>
           </div>
         )}
 
@@ -115,7 +122,7 @@ const LoginSignup = () => {
 
         {/* Submit Buttons */}
         <div className="submit-container">
-          <button className="submit-btn" onClick={handleSubmit}>
+          <button className="submit-btn" onClick={handleNavigation}>
             {action}
           </button>
         </div>
@@ -128,8 +135,8 @@ const LoginSignup = () => {
         </div>
       </div>
 
-      <div className="curve3"></div>
-      <div className="curve4"></div>
+      {/* <div className="curve3"></div>
+      <div className="curve4"></div> */}
     </div>
   );
 };

@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../assets/images/c-logo.png'
 import "./nav.css"
 import {Link} from 'react-router-dom'
 
 const NavBar = () => {
+    const [isAuthenticated, setIsAuthenticated]= useState(false);
+
+    const handleLogOut = () =>{
+        setIsAuthenticated(false)
+    }
+
+const handleSignIn = () => {
+    setIsAuthenticated(true)
+}
   return (
     <div className='navbar' id='nav'>
         <nav>
@@ -19,9 +28,14 @@ const NavBar = () => {
                 <Link to="/AboutUs">About Us</Link>
                 <Link to="/Services">Services</Link>
                 <Link to="/ContactUs">Contact Us</Link>
-                {/* <Link to="/Login" state={{action:"Login"}}>Login</Link> */}
-                <Link to="/Signin" state={{action:"Sign Up"}}>Sign In</Link>
-                
+
+                {/* if signed in successfully display a Log Out button*/}
+
+                {isAuthenticated ? (
+                    <Link to="/" onClick={handleLogOut} ><button className='log-out'>Log Out</button></Link>
+                ) : (
+                    <Link to="/Signin" onClick={handleSignIn} state={{action:"Sign Up"}}>Sign In</Link>
+                )}
             </div>
 
         </nav>

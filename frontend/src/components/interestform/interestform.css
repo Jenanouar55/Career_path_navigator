@@ -22,6 +22,7 @@ select{
     padding: 1vw;
     width: 30vw;
     margin: 5% 2%;
+    text-align: center;
     
 
 }
@@ -36,12 +37,13 @@ option:hover{
     background-color: gray;
     
     font-weight: 900;
-    padding: 3% 0;
-    width: 30%;
+    padding: 2% 4vw;
+    /* width: 30%; */
     margin: 13% auto;
     /* margin: 4% 37%; */
     border-radius: 50px;
-    
+    border: none;
+    font-size: 1.5vw;
 }
 
 .submit:hover{
@@ -62,13 +64,39 @@ option:hover{
     gap: 4vw;
     align-items: center;
     justify-content: center;
+    
 }
 
-input{
-    padding: 4% 10vw;
+ .profile_input{
+    padding: 6% 15vw;
     border-radius: 10px;
     border: 1px solid rgb(168, 168, 168);
+    
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+} 
+.profile input{
+    position: absolute;
+    left: 2%;
+    bottom: 25%;
+    padding: 1% 2%;
+    width: 25vw;
+    border: none;
+    outline: none;
+    
+    font-size: 1.2vw;
+    text-align: justify;
+    background-color: transparent;
+    background: none;
 }
+
+input:-webkit-autofill {
+    background-color: transparent !important; /* Remove the background color */
+    transition: background-color 5000s ease-in-out 0s; /* Ensure smooth transition */
+}
+
+
 
 .profile h5{
     text-align: left;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './interestform.css'
+import { useNavigate } from 'react-router-dom';
 
 const Interestform = () => {
 
@@ -7,18 +8,19 @@ const Interestform = () => {
     'Art & Design': ['UI/UX Developer', 'Graphic Design', 'Game Developer', 'Digital Animator'],
      Education: ['Teaching', 'Educational Technology', 'Curriculum Development'],
      Science: ['Biology', 'Physics', 'Chemistry', 'Astronomy'],
-     Tech: ['AI', 'Technical Writing', 'IT Support', 'Software Development'],
+     Tech: ['AI', 'Technical Writing', 'IT Support', 'Software Engineering'],
     };
 
   const subSubCategories = {
      AI: ['Machine Learning', 'Robotics', 'Data Science'],
     'Technical Writing': ['Content Writing', 'Documentation'],
     'IT Support': ['Networking', 'System Administration'],
-    'Software Development': ['Frontend Development', 'Backend Development', 'DevOps'],
+    'Software Engineering': ['Frontend Development', 'Backend Development', 'DevOps'],
   };
 
   const [mainInterest, setMainInterest] = useState('')
   const [subInterests, setSubInterests] = useState('')
+  const [interest, setInterest] = useState('')
 
   const handleMainInterestChange = (e) =>{
     setMainInterest(e.target.value)
@@ -29,25 +31,36 @@ const Interestform = () => {
   const handleSubInterestChange = (e) =>{
     setSubInterests(e.target.value)
   }
+
+  const handleInterestChange = (e) =>{
+    setInterest(e.target.value);
+  }
+
+  const navigate = useNavigate();
   
 
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log(mainInterest > subInterests, interest)
+    navigate('/Dashboard', {state: {interest: [mainInterest, subInterests, interest]}})
+  }
   return (
     <section className='interestForm'> 
-      <div >
+    <form onSubmit={handleSubmit} >
+      
         <h2>Edit Profile</h2>
         <div className="underline"></div>
-        <form action="" className='profile'>
-
+        <div className='profile'>
           <div>
             <h5>First Name</h5>
-            <div>
+            <div className='profile_input'>
             <input type="text" id='first-name'/>
             </div>
           </div>
 
           <div>
             <h5>Last Name</h5>
-            <div>
+            <div className='profile_input'>
             <input type="text" id='last-name'/>
             </div>
           </div>
@@ -55,79 +68,79 @@ const Interestform = () => {
           
           <div>
             <h5>Email</h5>
-            <div>
+            <div className='profile_input'>
             <input type="email"  id='email'/>
             </div>
           </div>
 
           <div>
             <h5>Address</h5>
-            <div>
+            <div className='profile_input'>
             <input type="address" />
             </div>
           </div>
 
           <div>
             <h5>City</h5>
-            <div>
+            <div className='profile_input'>
             <input type="text" />
             </div>
           </div>
 
           <div>
             <h5>State</h5>
-            <div>
+            <div className='profile_input'>
             <input type="text" />
             </div>
           </div>
-          
-        </form>
-      </div>
+      </div> 
+      
+      <div className='interests'>
+          <h2>What Are Your Interests</h2>
+          <div className="underline"></div>
 
-      <h2>What Are Your Interests</h2>
-      <div className="underline"></div>
-      <form action="">
+          {/* Main Interests */}
+          {/* <label htmlFor="main-interests">Select A Category</label> */}
+          <div className='select'>
+            <select 
+              id="main-interests"
+              value={mainInterest}
+              onChange={handleMainInterestChange}>
+              <option value="">-- Select --</option>
+              <option value="Art & Design">Art & Design</option>
+              <option value="Education">Education</option>
+              <option value="Science">Science</option>
+              <option value="Tech">Tech</option>
+            </select>
+          </div>
 
-        {/* Main Interests */}
-        {/* <label htmlFor="main-interests">Select A Category</label> */}
-        <div className='select'>
-        <select 
-          id="main-interests"
-          value={mainInterest}
-          onChange={handleMainInterestChange}>
-            <option value="">-- Choose an Interest --</option>
-            <option value="Art & Design">Art & Design</option>
-            <option value="Education">Education</option>
-            <option value="Science">Science</option>
-            <option value="Tech">Tech</option>
-        </select>
-        </div>
-
-        {/* Sub Interests */}
-        {/* <label htmlFor="sub-interests">Select a SubCategory</label> */}
-        <div className='select'>
-          <select
-           id="sub-interests"
-           onChange={handleSubInterestChange}
-           value={subInterests}
-          >
-            <option value="">-- Choose an Interest --</option>
-            {subCategories[mainInterest]?.map((subCategory, index) =>(
-              <option 
-              value={subCategory} 
-              key={index}
-              
-              > {subCategory} </option>
-            ))}
+          {/* Sub Interests */}
+          {/* <label htmlFor="sub-interests">Select a SubCategory</label> */}
+          <div className='select'>
+            <select
+              id="sub-interests"
+              onChange={handleSubInterestChange}
+              value={subInterests}
+            >
+              <option value="">-- Select --</option>
+              {subCategories[mainInterest]?.map((subCategory, index) =>(
+                <option 
+                value={subCategory} 
+                key={index}
+                > {subCategory} </option>
+              ))}
             </select>
         </div>
 
         {/* Sub subCategories */}
-        {/* <label htmlFor="sub-subInterests">Choose an Interest</label> */}
+        {/* <label htmlFor="sub-subInterests">Select</label> */}
         <div className='select'>
-          <select id="sub-subInterests">
-            <option value="">
-              {subSubCategories[subInterests] ? '-- Choose an Interest --' : '----------------'}
+          <select 
+          id="sub-subInterests"
+          value={interest}
+          onChange={handleInterestChange}>
+            <option>
+              {subSubCategories[subInterests] ? '-- Select --' : '----------------'}
 
             </option> 
 
@@ -136,9 +149,9 @@ const Interestform = () => {
             ))}
           </select>
         </div>
-
-        <div className='submit'>Submit</div>
-        </form>
+      </div>
+        <button className='submit' type='submit' onSubmit={handleSubmit}>Submit</button>
+      </form>
     </section>
   )
 }

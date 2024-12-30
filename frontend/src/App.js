@@ -9,14 +9,16 @@ import ContactUspage from "./Pages/ContactUspage";
 import AboutUspage from "./Pages/AboutUspage";
 
 import LoginSignupPage from "./Pages/LoginSignupPage";
+
+// import { useState } from "react";
+import DashboardPage from "./Pages/DashboardPage";
 import InterestFormPage from "./Pages/InterestFormPage";
-import { useState } from "react";
 
 
 function App() {
 
-  const [isSignUp, setisSignUp] = useState(false);
-  const [isLogin, setisLogin] = useState(false);
+  // const [isSignUp, setisSignUp] = useState(false);
+  // const [isLogin, setisLogin] = useState(false);
 
   return (
     // <div className="App">
@@ -34,15 +36,15 @@ function App() {
             <Route
             path="/Signin"
             exact
-            element={<LoginSignupPage onSignin={()=>setisSignUp(true)}/>}
+            element={<LoginSignupPage />}
             />
               
 
 
           {/* After user successfully sign up redirect to Login, after a successful Login
           redirect to interest page */}
-
-            <Route path="/Interests" element= {<InterestFormPage />} />
+            <Route path="/Interests" exact element={<InterestFormPage />} />
+            <Route path="/Dashboard" element= {<DashboardPage/>} />
           
         </Routes>
 
