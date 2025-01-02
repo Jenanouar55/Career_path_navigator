@@ -1,5 +1,5 @@
 
-import { Route, BrowserRouter as Router, Routes} from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes, useLocation} from "react-router-dom";
 import Navbar from "./components/navbar/nav";
 import HomePage from '../src/Pages/Home'
 import Footer from "./components/footer/footer"
@@ -14,19 +14,14 @@ import LoginSignupPage from "./Pages/LoginSignupPage";
 import DashboardPage from "./Pages/DashboardPage";
 import InterestFormPage from "./Pages/InterestFormPage";
 
-
-function App() {
-
-  // const [isSignUp, setisSignUp] = useState(false);
-  // const [isLogin, setisLogin] = useState(false);
-
-  return (
-    // <div className="App">
-      <Router>
-        <Navbar />
+const AppContent = () => {
+  const location = useLocation();
+  return(
+    <>
+    
+        {location.pathname !== '/Dashboard' && <Navbar />}
 
         <Routes>
-          
             <Route path="/" exact element= {<HomePage />}/>
             <Route path="/AboutUs" exact element= {<AboutUspage />} />
             <Route path="/Services" exact element= {<Servicespage />}/>
@@ -45,10 +40,22 @@ function App() {
           redirect to interest page */}
             <Route path="/Interests" exact element={<InterestFormPage />} />
             <Route path="/Dashboard" element= {<DashboardPage/>} />
-          
         </Routes>
 
-        <Footer />
+        {location.pathname !== '/Dashboard' && <Footer />}
+        
+  </>
+
+  )
+}
+
+
+function App() {
+
+  return (
+    // <div className="App">
+      <Router>
+        <AppContent />
       </Router>
       
     // {/* </div> */}

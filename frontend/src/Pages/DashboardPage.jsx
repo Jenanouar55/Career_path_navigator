@@ -1,10 +1,11 @@
 import React from 'react'
-import Dashboard from '../components/Dashboard/Dashboard'
 
+import Sidebar from '../components/Dashboard/sidebar'
 const DashboardPage = () => {
   return (
     <section>
-        <Dashboard />
+        
+        <Sidebar />
     </section>
   )
 }

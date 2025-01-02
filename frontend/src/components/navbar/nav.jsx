@@ -14,7 +14,7 @@ const handleSignIn = () => {
     setIsAuthenticated(true)
 }
   return (
-    <div className='navbar' id='nav'>
+    <div className='header-navbar' id='nav'>
         <nav>
             <div className="nav_image">
                 <Link to="/">
