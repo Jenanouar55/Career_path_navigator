@@ -1,36 +1,4 @@
-import React from 'react'
-import './Dashboard.css'
-import { useLocation } from 'react-router-dom'
 
-
-const Dashboard = () => {
-
-//     // Simulate a database of resources
-//   const resources = {
-//     Tech: {
-//       'Software Engineering': [
-//         'Frontend Development  - Codecademy',
-//         'Backend Engi - Udemy',
-//         'DevOps Essentials - Pluralsight',
-//       ],
-//       AI: ['Introduction to AI - Coursera', 'AI Ethics - LinkedIn Learning'],
-//       'Technical Writing': ['Technical Writing - Google Developers'],
-//       'IT Support': ['IT Support Specialist - Google IT Certificate'],
-//     },
-//     Science: {
-//       Biology: ['Molecular Biology - Khan Academy', 'Human Anatomy - Coursera'],
-//       Physics: ['Classical Mechanics - MIT OpenCourseWare'],
-//       Chemistry: ['Organic Chemistry - edX'],
-//     },
-//     Education: {
-//       Teaching: ['Teaching Strategies - Coursera'],
-//       'Curriculum Design': ['Curriculum Planning - LinkedIn Learning'],
-//     },
-//     'Arts & Design': {
-//       'Graphic Design': ['Graphic Design Basics - Canva', 'Adobe XD Tutorials'],
-//       'UI/UX Design': ['UX Design Fundamentals - Interaction Design Foundation'],
-//     },
-//   };
 
 const resources = {
     'Art & Design': {
@@ -73,54 +41,4 @@ const resources = {
   };
   
 
-    const location = useLocation();
-    console.log('Location State:', location.state)
-    const { interest } = location.state || {};
-    const mainInterest = interest?.[0];
-    const secondaryInterest = interest?.[1];
-    const tertiaryInterest = interest?.[2] || null;
-    console.log(mainInterest, secondaryInterest, tertiaryInterest);
-    let recommendations;
-
-    if (mainInterest && secondaryInterest) {
-        console.log('Main:', mainInterest, 'Secondary:', secondaryInterest);
-        const category = resources[mainInterest]?.[secondaryInterest]
-        if (tertiaryInterest && Array.isArray(category?.[tertiaryInterest])) {
-            recommendations = category[tertiaryInterest] 
-            console.log('Recommendation:', recommendations)
-        } else {
-            recommendations = resources[mainInterest]?.[secondaryInterest];
-    }
-    }
-    else {
-        recommendations ='No Recommendations Found';
-    }
-
-    
-
-  return (
-    <div >
-        <h2>Welcome To Your Dashboard</h2>
-        <div className='dashboard'>
-            
-            <section className='recommendations'>
-                {Array.isArray(recommendations) ? (
-                    <><h3>Recommended Courses for {mainInterest} - {secondaryInterest} {tertiaryInterest ? `- ${tertiaryInterest}` : ''}</h3>
-                    <ul>
-                        {recommendations.map((resource, index) => (
-                            <li key={index}>{resource}</li>
-                        ))}
-                    </ul>
-                    </>
-                ) : (
-                    <p>{recommendations}</p>
-                )}
-            </section>
-        </div>
-    </div>
-
-    
-  )
-}
-
-export default Dashboard
+   

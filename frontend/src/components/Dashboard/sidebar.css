@@ -1,4 +1,4 @@
-.dashboard {
+.sidebar {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -6,7 +6,7 @@
     
 }
 
-.dashboard .aside_nav{
+.sidebar .aside_nav{
     /* width: 18vw; */
     max-width: 17vw;
     padding: 0.5% ;
@@ -19,14 +19,14 @@
    
 }
 
-.dashboard .aside_nav .nav_image img {
+.sidebar .aside_nav .nav_image img {
     max-width: 35%;
     margin-top: 2vw;
     
     
 }
 
-.dashboard .aside_nav .dashboard-links{
+.sidebar .aside_nav .sidebar-links{
     
     display: flex;
     flex-direction: column;
@@ -36,14 +36,14 @@
 
   
 
-.dashboard .aside_nav .dashboard-links p{
+.sidebar .aside_nav .sidebar-links p{
     list-style: none;
     margin-top: 0;
     padding: 0 2%;
     display: flex;
 }
 
-.dashboard .aside_nav .dashboard-links p a {
+.sidebar .aside_nav .sidebar-links p a {
     list-style: none;
     color: #ccc;
     font-weight: 600;
@@ -53,13 +53,13 @@
     gap: 1vw;
 }
 
-.dashboard .aside_nav .dashboard-links p a:hover {
-    background-color: rgba(187, 52, 187, 0.829);;
+.sidebar .aside_nav .sidebar-links p a:hover {
+    background-color: rgba(187, 52, 187, 0.829);
     padding: 1vw ;
     border-radius: 10px;
 }
 
-.dashboard .aside_nav .logout a{
+.sidebar .aside_nav .logout a{
     text-decoration: none;
     color: red;
     font-size: 1.4vw;
@@ -72,7 +72,7 @@
     gap: 0.5vw;
 }
 
-.dashboard .aside_nav .logout hr{
+.sidebar .aside_nav .logout hr{
     position: absolute;
     bottom: 8vw;
     width: 100%;
@@ -85,12 +85,12 @@
     
     
     
-    .dashboard .aside_nav {
+    .sidebar .aside_nav {
         max-width: 28vw;
 }
     
     
-   /* .dashboard .aside_nav .logout a{
+   /* .sidebar .aside_nav .logout a{
         font-size: 2vw;
         margin-bottom: 5vw;
     } */

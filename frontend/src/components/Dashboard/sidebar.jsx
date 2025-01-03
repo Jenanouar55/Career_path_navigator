@@ -8,7 +8,7 @@ import { faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 
 const sidebar = () => {
   return (
-    <section className="dashboard">
+    <section className="sidebar">
             <aside>
                 <nav className='aside_nav'>
     
@@ -17,7 +17,7 @@ const sidebar = () => {
                         <img src={logo} alt="logo" />
                     </div>
     
-                    <div className='dashboard-links'>
+                    <div className='sidebar-links'>
                         
                         <p>
                             <Link>
@@ -54,9 +54,6 @@ const sidebar = () => {
                 </nav>
             </aside>
     
-            <section className="main-body">
-    
-            </section>
         </section>
   )
 }

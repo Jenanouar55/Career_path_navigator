@@ -1,0 +1,10 @@
+.dashboard {
+    display: flex;
+    flex: 1;
+}
+
+.dashboard .content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
