@@ -1,39 +1,56 @@
 import React, { useState } from 'react'
 import './interestform.css'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Interestform = () => {
 
-  const subCategories = {
-    'Art & Design': ['UI/UX Developer', 'Graphic Design', 'Game Developer', 'Digital Animator'],
-     Education: ['Teaching', 'Educational Technology', 'Curriculum Development'],
-     Science: ['Biology', 'Physics', 'Chemistry', 'Astronomy'],
-     Tech: ['AI', 'Technical Writing', 'IT Support', 'Software Engineering'],
-    };
+  // Get Username and email from the URL, passed from profile page
+  const location = useLocation();
+  const userInfo = location.state?.userInfo
 
-  const subSubCategories = {
-     AI: ['Machine Learning', 'Robotics', 'Data Science'],
-    'Technical Writing': ['Content Writing', 'Documentation'],
-    'IT Support': ['Networking', 'System Administration'],
-    'Software Engineering': ['Frontend Development', 'Backend Development', 'DevOps'],
-  };
+  // Interest Form Array 
 
-  const [mainInterest, setMainInterest] = useState('')
-  const [subInterests, setSubInterests] = useState('')
-  const [interest, setInterest] = useState('')
+  const fields = ['Technology', 'Healthcare', 'Business & Management', 'Education',
+    'Creative Arts', 'Engineering', 'Marketing & Sales'
+  ]
 
-  const handleMainInterestChange = (e) =>{
-    setMainInterest(e.target.value)
-    console.log(e.target.value)
-    setSubInterests('')
+  const roles = ['Entry-Level', 'Mid-Level', 'Senior-Level', 'Internship', 'Freelance']
+
+  const skills = ['Coding (Python, Java, etc)', 'Graphics Design', 'Data Analysis', 'Project Management', 'Communication', 'Marketing & SEO']
+
+  const workEnvironments = ['Remote', 'In-person', 'Hybrid']
+
+  const industries = ['Software Development', 'Health Care', 'Finance', 'Education', 'Media & Entertainment', 'Manufacturing']
+
+  const goals = ['Becaome a Manager', 'Build My Own Business', 'Become an Expert in a Specific Field']
+
+  // State to store form data
+  const [field, setField] = useState('')
+  const [role, setRole] = useState('')
+  const [skill, setSkill] = useState('')
+  const [workEnvironment, setWorkEnvironment] = useState('')
+  const [industry, setIndustry] = useState('')
+  const [goal, setGoal] = useState('')
+
+  // Functions to handle form data change
+  const handleFieldChange = (e) => {
+    setField(e.target.value)
+    console.log('The Chosen Field is:', e.target.value)
   }
 
-  const handleSubInterestChange = (e) =>{
-    setSubInterests(e.target.value)
+  const handleRoleChange = (e) => {
+    setRole(e.target.value)
+    console.log('The Chosen Role is:', e.target.value)
   }
 
-  const handleInterestChange = (e) =>{
-    setInterest(e.target.value);
+  const handleSkillChange = (e) => {
+    setSkill(e.target.value)
+    console.log('The Chosen Skill is:', e.target.value)
+  }
+
+  const handleWorkEnvironmentChange = (e) => {
+    setWorkEnvironment(e.target.value)
+    console.log('The Chosen Work Environment is:', e.target.value)
   }
 
   const navigate = useNavigate();
@@ -41,116 +58,80 @@ const Interestform = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log(mainInterest > subInterests, interest)
-    navigate('/Dashboard', {state: {interest: [mainInterest, subInterests, interest]}})
+    // console.log('Interets:',`mainInterest > subInterests, interest`)
+    navigate('/Dashboard', {state: {interests:[field], userInfo: userInfo}})
   }
   return (
-    <section className='interestForm'> 
-    <form onSubmit={handleSubmit} >
-      
-        <h2>Edit Profile</h2>
-        <div className="underline"></div>
-        <div className='profile'>
-          <div>
-            <h5>First Name</h5>
-            <div className='profile_input'>
-            <input type="text" id='first-name'/>
-            </div>
-          </div>
+    <section className='interestForm'>
 
-          <div>
-            <h5>Last Name</h5>
-            <div className='profile_input'>
-            <input type="text" id='last-name'/>
-            </div>
-          </div>
-
-          
-          <div>
-            <h5>Email</h5>
-            <div className='profile_input'>
-            <input type="email"  id='email'/>
-            </div>
-          </div>
-
-          <div>
-            <h5>Address</h5>
-            <div className='profile_input'>
-            <input type="address" />
-            </div>
-          </div>
-
-          <div>
-            <h5>City</h5>
-            <div className='profile_input'>
-            <input type="text" />
-            </div>
-          </div>
-
-          <div>
-            <h5>State</h5>
-            <div className='profile_input'>
-            <input type="text" />
-            </div>
-          </div>
-      </div> 
-      
-      <div className='interests'>
-          <h2>What Are Your Interests</h2>
+      <form onSubmit={handleSubmit} >
+        <div className='interests'>
+          <h2>Interests</h2>
           <div className="underline"></div>
 
-          {/* Main Interests */}
-          {/* <label htmlFor="main-interests">Select A Category</label> */}
+          {/* Field*/}
           <div className='select'>
+            <label htmlFor="fields">What Field are you interested in?</label>
             <select 
-              id="main-interests"
-              value={mainInterest}
-              onChange={handleMainInterestChange}>
-              <option value="">-- Select --</option>
-              <option value="Art & Design">Art & Design</option>
-              <option value="Education">Education</option>
-              <option value="Science">Science</option>
-              <option value="Tech">Tech</option>
+              id="fields"
+              value={field}
+              onChange={handleFieldChange}>
+                <option value="">---Select---</option>
+                {fields.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
+              ))}
             </select>
           </div>
 
-          {/* Sub Interests */}
-          {/* <label htmlFor="sub-interests">Select a SubCategory</label> */}
           <div className='select'>
-            <select
-              id="sub-interests"
-              onChange={handleSubInterestChange}
-              value={subInterests}
-            >
-              <option value="">-- Select --</option>
-              {subCategories[mainInterest]?.map((subCategory, index) =>(
-                <option 
-                value={subCategory} 
-                key={index}
-                > {subCategory} </option>
+            <label htmlFor="roles">What type of role are you looking for?</label>
+            <select 
+              id="roles"
+              value={role}
+              onChange={handleRoleChange}>
+                <option value="">---Select---</option>
+                {roles.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
               ))}
             </select>
-        </div>
+          </div>
 
-        {/* Sub subCategories */}
-        {/* <label htmlFor="sub-subInterests">Select</label> */}
-        <div className='select'>
-          <select 
-          id="sub-subInterests"
-          value={interest}
-          onChange={handleInterestChange}>
-            <option>
-              {subSubCategories[subInterests] ? '-- Select --' : '----------------'}
+          <div className='select'>
+            <label htmlFor="skills">What skills do you currently have?</label>
+            <select 
+              id="skills"
+              value={skill}
+              onChange={handleSkillChange}>
+                <option value="">---Select---</option>
+                {skills.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
+              ))}
+            </select>
+          </div>
 
-            </option> 
-
-            {subSubCategories[subInterests]?.map((interest, index) => (
-              <option key={index}>{interest}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-        <button className='submit' type='submit' onSubmit={handleSubmit}>Submit</button>
+          <div className='select'>
+            <label htmlFor="workEnvironment">What type of WOrk Environment do you prefer?</label>
+            <select 
+              id="workEnvironment"
+              value={workEnvironment}
+              onChange={handleWorkEnvironmentChange}>
+                <option value="">---Select---</option>
+                {workEnvironments.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
+              ))}
+            </select>
+          </div>
+        
+      </div> 
+      <button className='submit' type='submit' onSubmit={handleSubmit}>Submit</button>
       </form>
     </section>
   )

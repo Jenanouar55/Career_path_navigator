@@ -1,5 +1,5 @@
 import React from 'react'
-import './sidebar.css'
+import './styles/sidebar.css'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/c-logo.png'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -20,24 +20,24 @@ const sidebar = () => {
                     <div className='sidebar-links'>
                         
                         <p>
-                            <Link>
+                            <Link className='active'>
                                 <FontAwesomeIcon icon={faTachometerAlt} className='icon'/>
                                 Dashboard
                             </Link>
                         </p>
     
-                        <p><Link> 
-                        <FontAwesomeIcon icon={faHeart}/>Interests</Link></p>
-    
-                        <p><Link> <FontAwesomeIcon icon={faBook}/>
+                        <p><Link to='/'> 
+                        <FontAwesomeIcon icon={faHeart} className='icon'/>Interests</Link></p>
+ 
+                        <p><Link to='/'> <FontAwesomeIcon icon={faBook} className='icon'/>
                         Courses</Link></p>
     
-                        <p><Link>
-                        <FontAwesomeIcon icon={faCog} />
+                        <p><Link to='/'>
+                        <FontAwesomeIcon icon={faCog} className='icon'/>
                         Settings</Link></p>
                         
-                        <p><Link>
-                        <FontAwesomeIcon icon={faHandsHelping} />
+                        <p><Link to='/'>
+                        <FontAwesomeIcon icon={faHandsHelping} className='icon'/>
                         Help</Link></p>
                         
                     </div>
@@ -46,7 +46,7 @@ const sidebar = () => {
                     <div className="logout">
                         <hr />
                         <Link to="/">
-                        <FontAwesomeIcon icon={faSignOutAlt} />
+                        <FontAwesomeIcon icon={faSignOutAlt} className='icon'/>
                         Logout</Link>
                     </div>
                     

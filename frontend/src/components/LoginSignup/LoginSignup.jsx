@@ -60,7 +60,7 @@ const LoginSignup = () => {
 
   const handleNavigation = () => {
     
-    navigate('/Interests')
+    navigate('/EditProfile')
   }
 
   return (

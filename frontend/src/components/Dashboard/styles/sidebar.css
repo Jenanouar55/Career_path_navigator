@@ -15,8 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 3vw;
-    position: relative;
-   
+    position: fixed;
 }
 
 .sidebar .aside_nav .nav_image img {
@@ -48,14 +47,15 @@
     color: #ccc;
     font-weight: 600;
     text-decoration: none;
-    padding: 1vw ;
+    padding: 1vw 5.5vw 1vw 1vw;
     display: flex;
     gap: 1vw;
+    color: #dde6ed;
 }
 
-.sidebar .aside_nav .sidebar-links p a:hover {
-    background-color: rgba(187, 52, 187, 0.829);
-    padding: 1vw ;
+.sidebar .aside_nav .sidebar-links p a:hover,
+.active {
+    background: rgba(187, 52, 187, 0.829);
     border-radius: 10px;
 }
 
@@ -81,6 +81,13 @@
     border-top: 2px double #413d3d;
 }
 
+.sidebar .aside_nav .sidebar-links p a .icon {
+    margin-top: 4%;
+}
+
+.sidebar .logout a .icon{
+    margin-top: 3%;
+}
 @media (min-width:300px) and (max-width: 768px) {
     
     

@@ -13,6 +13,7 @@ import LoginSignupPage from "./Pages/LoginSignupPage";
 // import { useState } from "react";
 import DashboardPage from "./Pages/DashboardPage";
 import InterestFormPage from "./Pages/InterestFormPage";
+import EditProfile from "./components/editProfile/editProfile";
 
 const AppContent = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const AppContent = () => {
           redirect to interest page */}
             <Route path="/Interests" exact element={<InterestFormPage />} />
             <Route path="/Dashboard" element= {<DashboardPage/>} />
+            <Route path="/EditProfile" element= {<EditProfile/>} />
         </Routes>
 
         {location.pathname !== '/Dashboard' && <Footer />}

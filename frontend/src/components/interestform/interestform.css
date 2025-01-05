@@ -10,18 +10,23 @@
 }
 
 .interestForm h2{
-    padding-top: 10%;
+    padding-top: 5%;
     color: rgba(187, 52, 187, 0.829);
-    margin-bottom: 2%;
+    margin-bottom: 0;
 }
 
-
+.interestForm .interests .select label{
+    display: block;
+    margin: 4vw 0 0;
+    font-weight: 500;
+    font-size: 1.5vw;
+}
 
 select{
 
     padding: 1vw;
     width: 30vw;
-    margin: 5% 2%;
+    margin: 2%;
     text-align: center;
     
 
@@ -32,7 +37,7 @@ select:hover{
 option:hover{
     cursor: pointer;
 }
-.submit{
+.interestForm .submit{
     /* background-color: rgba(187, 52, 187, 0.829); */
     background-color: gray;
     
@@ -58,52 +63,7 @@ option:hover{
     margin-top: 0;
 }
 
-.profile{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4vw;
-    align-items: center;
-    justify-content: center;
-    
-}
 
- .profile_input{
-    padding: 6% 15vw;
-    border-radius: 10px;
-    border: 1px solid rgb(168, 168, 168);
-    
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-} 
-.profile input{
-    position: absolute;
-    left: 2%;
-    bottom: 25%;
-    padding: 1% 2%;
-    width: 25vw;
-    border: none;
-    outline: none;
-    
-    font-size: 1.2vw;
-    text-align: justify;
-    background-color: transparent;
-    background: none;
-}
-
-input:-webkit-autofill {
-    background-color: transparent !important; /* Remove the background color */
-    transition: background-color 5000s ease-in-out 0s; /* Ensure smooth transition */
-}
-
-
-
-.profile h5{
-    text-align: left;
-    margin-bottom: 0;
-    font-size: 80%;
-    color: #777575;
-}
 
 @media (max-width: 768px) {
     .interestForm{

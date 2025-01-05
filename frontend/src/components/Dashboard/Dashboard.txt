@@ -2,7 +2,8 @@
 
 const resources = {
     'Art & Design': {
-      'UI/UX Developer': ['UX Design Fundamentals - Interaction Design Foundation', 'Figma Tutorials - YouTube'],
+      'UI/UX Developer': [
+        'UX Design Fundamentals - Interaction Design Foundation', 'Figma Tutorials - YouTube'],
       'Graphic Design': ['Graphic Design Basics - Canva', 'Adobe Photoshop Tutorials'],
       'Game Developer': ['Game Development with Unity - Coursera', 'Game Design - edX'],
       'Digital Animator': ['2D Animation - Skillshare', 'Blender Tutorials - YouTube'],

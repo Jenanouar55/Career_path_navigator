@@ -1,14 +1,12 @@
 import React from 'react'
-import './header.css'
-import {BiUser} from 'react-icons/bi'
+import './styles/header.css'
+
 
 const header = () => {
   return (
-    <div className='header'>
+    <div className='dashboard-header'>
         <h1>Dashboard</h1>
-        <div className='icon-border'>
-        <BiUser className='icon'/>
-        </div>
+        
         
     </div>
   )

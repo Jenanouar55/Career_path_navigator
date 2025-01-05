@@ -1,0 +1,54 @@
+.bookmark-header h2{
+    padding: 0 3%;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.bookmark .bookmark-list .bookmark-item {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+    padding: 1% 3%;
+    cursor: pointer;
+    margin: 0 2%;
+    translate: 1s ease-in-out;
+}
+.bookmark .bookmark-list .bookmark-item .duration {
+    font-size: 1.5vw;
+}
+.bookmark .bookmark-list .bookmark-item:hover {
+    
+    cursor: pointer;
+    
+}
+
+
+.bookmark .bookmark-list .bookmark-item .bookmark-icon {
+    font-size: 2vw;
+    border: 2px solid #ccc;
+    padding: 1% 1.5% 0;
+    margin: 0 0 2% 0;
+    border-radius: 60px;
+}
+
+.bookmark .bookmark-list .bookmark-item .bookmark-title h3 {
+    font-size: 1.2vw;
+    width: 100%;
+    color: black;
+}
+
+.bookmark-details {
+    font-weight: 600;
+    font-size: 1.8vw;
+    color: black;
+    padding: 0.2vw 1vw;
+    transition: 0.5s ease;
+}
+
+.bookmark-details:hover{
+     background-color: rgba(187, 52, 187, 0.829);
+     border-radius: 50px;
+     padding: 0.2vw 1vw;
+     transform: scale(1.1);
+} 
