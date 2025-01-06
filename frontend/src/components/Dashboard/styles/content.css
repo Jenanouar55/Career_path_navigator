@@ -1,5 +1,14 @@
 .dashboard-content {
     box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
-    max-width: 100vw;
+    
     height: 100vh;
+}
+
+.dashboard-content h3 {
+    padding: 40vh 10vw 0 6vw;
+    font-size: 2vw;
+    width: 100%;
+    
+    color: red;
+    
 }

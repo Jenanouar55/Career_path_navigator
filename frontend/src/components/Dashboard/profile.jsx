@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom'
 const Profile = () => {
   const location = useLocation();
   const userInfo = location.state?.userInfo;
-  const interest = location.state?.interest;
+  const information = location.state?.information;
   
   return (
     <div className='dashboard-profile'>
@@ -20,7 +20,7 @@ const Profile = () => {
             <BiUser className='icon'/>
           </div>
           <h3 className="username">{userInfo[0]}</h3>
-          <h4 className="interests">{interest[0]}/{interest[2]}</h4>
+          <h4 className="interests">{information[4]}/{information[4]}</h4>
 
           <div className="interest-list">
 

@@ -18,11 +18,12 @@ const Interestform = () => {
 
   const skills = ['Coding (Python, Java, etc)', 'Graphics Design', 'Data Analysis', 'Project Management', 'Communication', 'Marketing & SEO']
 
+
   const workEnvironments = ['Remote', 'In-person', 'Hybrid']
 
-  const industries = ['Software Development', 'Health Care', 'Finance', 'Education', 'Media & Entertainment', 'Manufacturing']
-
-  const goals = ['Becaome a Manager', 'Build My Own Business', 'Become an Expert in a Specific Field']
+  // const industries = ['Software Development', 'Health Care', 'Finance', 'Education', 'Media & Entertainment', 'Manufacturing']
+  const industries = ['Machine Learning', 'Robotics', 'Frontend Development']
+  const goals = ['Become a Manager', 'Build My Own Business', 'Become an Expert in a Specific Field']
 
   // State to store form data
   const [field, setField] = useState('')

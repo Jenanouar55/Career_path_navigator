@@ -7,16 +7,15 @@ import { BiPlus } from 'react-icons/bi';
 import Bookmark from './bookmark';
 
 
-const Card = ({interests, onBookMark}) => {
-    const interest = interests[0]
-    const subInterest = interests[2]
-    const resource = recommendations[subInterest]
+const Card = ({information, onBookMark}) => {
+    const info = information
+    const resource = recommendations[info[4]]
 
     // console.log(resource)
     
   return (
     <div>
-        <h3>Recommended {interest} Courses:</h3>
+        <h3>Recommended {info[4]} Courses:</h3>
         <section className='card-section'>
             {resource.map((item, index) => (
                 <div className='card'>

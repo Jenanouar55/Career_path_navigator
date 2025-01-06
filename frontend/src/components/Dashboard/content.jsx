@@ -9,14 +9,14 @@ const Content = ({ information }) => {
 
   const [bookmarks, setBookmarks] = useState([])
   
-  const subInterest = interests[2]
+  const subInterest = information[4]
   const resource = recommendations[subInterest]
 
-  if (!resource || !Array.isArray(resource)) {
-    return (
-      <div className="dashboard-content"><h3>No Resource Available</h3></div>
-    )
-  }
+  // if (!resource || !Array.isArray(resource)) {
+  //   return (
+  //     <div className="dashboard-content"><h3>No Resource Available</h3></div>
+  //   )
+  // }
 
   const handleBookMarks = (item) => {
     const isBookmarked =  bookmarks.some((bookmark) => bookmark.id === item.id);
@@ -36,8 +36,15 @@ const Content = ({ information }) => {
   return (
     <div className='dashboard-content'>
       <Header />
-      <Bookmark bookmarks={bookmarks} onRemoveBookmark={handleRemoveBookmark}/>
-      <Card interests={interests} onBookMark={handleBookMarks} />
+      {(!resource || !Array.isArray(resource)) ? (
+        <h3>No Resource Available</h3>
+      ) : (
+        <>
+          <Bookmark bookmarks={bookmarks} onRemoveBookmark={handleRemoveBookmark}/>
+          <Card information={information} onBookMark={handleBookMarks} />
+        </>
+      )}
+      
     </div>
   )
 }
