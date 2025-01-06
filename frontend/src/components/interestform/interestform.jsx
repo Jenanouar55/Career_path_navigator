@@ -35,22 +35,26 @@ const Interestform = () => {
   // Functions to handle form data change
   const handleFieldChange = (e) => {
     setField(e.target.value)
-    console.log('The Chosen Field is:', e.target.value)
   }
 
   const handleRoleChange = (e) => {
     setRole(e.target.value)
-    console.log('The Chosen Role is:', e.target.value)
   }
 
   const handleSkillChange = (e) => {
     setSkill(e.target.value)
-    console.log('The Chosen Skill is:', e.target.value)
   }
 
   const handleWorkEnvironmentChange = (e) => {
     setWorkEnvironment(e.target.value)
-    console.log('The Chosen Work Environment is:', e.target.value)
+  }
+
+  const handleIndustryChange = (e) => {
+    setIndustry(e.target.value)
+  }
+
+  const handleGoalChange = (e) =>{
+    setGoal(e.target.value)
   }
 
   const navigate = useNavigate();
@@ -59,7 +63,7 @@ const Interestform = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
     // console.log('Interets:',`mainInterest > subInterests, interest`)
-    navigate('/Dashboard', {state: {interests:[field], userInfo: userInfo}})
+    navigate('/Dashboard', {state: {information:[field, role, skill, workEnvironment, industry, goal], userInfo: userInfo}})
   }
   return (
     <section className='interestForm'>
@@ -116,9 +120,9 @@ const Interestform = () => {
           </div>
 
           <div className='select'>
-            <label htmlFor="workEnvironment">What type of WOrk Environment do you prefer?</label>
+            <label htmlFor="workEnvironments">What type of Work Environment do you prefer?</label>
             <select 
-              id="workEnvironment"
+              id="workEnvironments"
               value={workEnvironment}
               onChange={handleWorkEnvironmentChange}>
                 <option value="">---Select---</option>
@@ -126,6 +130,31 @@ const Interestform = () => {
                   <option key={index} value={item}>
                     {item}
                   </option>
+              ))}
+            </select>
+          </div>
+
+          <div className='select'>
+            <label htmlFor="industries">What industries interest you most?</label>
+            <select 
+              id="industries"
+              value={industry}
+              onChange={handleIndustryChange}>
+                <option value="">---Select---</option>
+                {industries.map((item, index) => (
+                  <option key={index} value={item}>
+                    {item}
+                  </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="select">
+            <label htmlFor="goals">What are your long term career goals?</label>
+            <select id="goals" value={goal} onChange={handleGoalChange}>
+              <option value="">--Select--</option>
+              {goals.map((item, index) => (
+                <option value={item} key={index}>{item}</option>
               ))}
             </select>
           </div>

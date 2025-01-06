@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom'
 
 const DashboardPage = () => {
   const location = useLocation()
-  const interests = location.state?.interest || [];
+  const information = location.state?.information || [];
 
   return (
 
@@ -16,7 +16,7 @@ const DashboardPage = () => {
         
         <section className='content'>
           <section className="dashboard-content">
-            <Content interests={interests}/>
+            <Content information={information}/>
           </section>
 
           <section className="dashboard-profile">

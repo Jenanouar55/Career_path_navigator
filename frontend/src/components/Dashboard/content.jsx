@@ -5,7 +5,7 @@ import Card from './card'
 import Bookmark from './bookmark'
 import { recommendations } from './recommendations'
 
-const Content = ({ interests }) => {
+const Content = ({ information }) => {
 
   const [bookmarks, setBookmarks] = useState([])
   
