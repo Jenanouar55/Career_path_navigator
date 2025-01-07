@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutUspage.css';
+import Admin from '../assets/images/admin.png'
 
 const AboutUspage = () => {
   return (
@@ -51,24 +52,24 @@ const AboutUspage = () => {
         <h2>Meet Our Team</h2>
         <div className="team-grid">
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member 1" />
+            <img src={Admin} alt="Team Member 1" />
             <h3>Hanzar Ziad</h3>
             <p>Back-end Devloper</p>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member 2" />
+            <img src={Admin} alt="Team Member 2" />
             <h3>Mary Maina</h3>
             <p>Back-end Devloper</p>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member 3" />
+            <img src={Admin} alt="Team Member 3" />
             <h3>Uzor Solomon</h3>
             <p>Front-end Developer</p>
           </div>
-          <div className="team-member1">
-            <img src="https://via.placeholder.com/150" alt="Team Member 3" />
+          <div className="team-member">
+            <img src={Admin} alt="Team Member 3" />
             <h3>Bolatito shorungbe</h3>
-            <p>Fron-end Developer</p>
+            <p>Frontend Developer</p>
           </div>
         </div>
       </section>
@@ -77,7 +78,7 @@ const AboutUspage = () => {
       <section className="about-section">
         <h2>Contact Us</h2>
         <p>
-          Have questions or want to learn more about us? <a href="/contact">Get in touch</a> with us today.
+          Have questions or want to learn more about us? <a href="/ContactUs">Get in touch</a> with us today.
         </p>
       </section>
     </div>

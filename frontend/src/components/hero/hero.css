@@ -27,5 +27,8 @@
     font-size: 4vw;
     padding-top: 10%;
     margin: 0;
-    
+}
+
+.hero_section .hero_text p{
+    font-size: 2vw;
 }

@@ -3,8 +3,6 @@ import { Route, BrowserRouter as Router, Routes, useLocation} from "react-router
 import Navbar from "./components/navbar/nav";
 import HomePage from '../src/Pages/Home'
 import Footer from "./components/footer/footer"
-
-import Servicespage from "./Pages/Servicespage";
 import ContactUspage from "./Pages/ContactUspage";
 import AboutUspage from "./Pages/AboutUspage";
 
@@ -25,7 +23,6 @@ const AppContent = () => {
         <Routes>
             <Route path="/" exact element= {<HomePage />}/>
             <Route path="/AboutUs" exact element= {<AboutUspage />} />
-            <Route path="/Services" exact element= {<Servicespage />}/>
             <Route path="/ContactUs" exact element= {<ContactUspage />}/>
             {/* <Route path="/Login" exact element= {<LoginSignupPage/>}/> */}
 

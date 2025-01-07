@@ -1,18 +1,28 @@
+.bookmark-header{
+    
+}
+
 .bookmark-header h2{
-    padding: 0 3%;
+    padding: 3% 4% ;
     font-size: 1.5vw;
-    font-weight: 600;
+    font-weight: 700;
+    /* border: 2px solid red; */
+    
 }
 
 .bookmark .bookmark-list .bookmark-item {
     display: flex;
     align-items: center;
-    
+    max-height: 10vh;
     justify-content: space-between;
-    padding: 1% 3%;
+    padding: 5%;
     cursor: pointer;
-    margin: 0 2%;
+    color: red;
     translate: 1s ease-in-out;
+    /* border: 2px solid blue; */
+    border: 2px solid #c5c5c5;
+    margin: 1vw;
+    border-radius: 5px;
 }
 .bookmark .bookmark-list .bookmark-item .duration {
     font-size: 1.5vw;
@@ -30,12 +40,14 @@
     padding: 1% 1.5% 0;
     margin: 0 0 2% 0;
     border-radius: 60px;
+    color: black;
 }
 
 .bookmark .bookmark-list .bookmark-item .bookmark-title h3 {
     font-size: 1.2vw;
-    width: 100%;
     color: black;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .bookmark-details {
@@ -52,3 +64,15 @@
      padding: 0.2vw 1vw;
      transform: scale(1.1);
 } 
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .bookmark-header h2{
+        padding: 2% 4% ;
+        margin-top: -20vw;
+        font-size: 2.5vw;
+    }
+
+    .bookmark .bookmark-list .bookmark-item p{
+        font-size: 2vw;
+    }
+}

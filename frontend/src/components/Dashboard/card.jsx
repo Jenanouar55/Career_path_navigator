@@ -14,7 +14,7 @@ const Card = ({information, onBookMark}) => {
     // console.log(resource)
     
   return (
-    <div>
+    <div className='resource-card'>
         <h3>Recommended {info[4]} Courses:</h3>
         <section className='card-section'>
             {resource.map((item, index) => (

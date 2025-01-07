@@ -8,11 +8,10 @@ const contactus = () => {
         <h1>Contact Us</h1>
         <h4>Send Us A Message</h4>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Id Sextilius factum negabat. Quo tandem modo? 
-            At eum nihili facit; Quae contraria sunt his, malane?
+        We’d Love to Hear From You!
+        Whether you have a question, feedback, or just want to say hello, our team is here to help. Feel free to reach out
         </p>
-        <a href="#">Contact Us</a>
+        <a href="/ContactUs">Contact Us</a>
         
 
         </div>

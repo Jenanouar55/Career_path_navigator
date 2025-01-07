@@ -59,16 +59,13 @@ const LoginSignup = () => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    
     navigate('/EditProfile')
   }
 
   return (
      <div className="login-signup-body">
-       {/* <div className="curve1"></div>
-       <div className="curve2"></div> */}
 
-      <div className="container">
+      <div className="login-signup-container">
         <div className="header">
           <div className="header_text">{action}</div>
           <div className="underline"></div>
@@ -135,8 +132,6 @@ const LoginSignup = () => {
         </div>
       </div>
 
-      {/* <div className="curve3"></div>
-      <div className="curve4"></div> */}
     </div>
   );
 };

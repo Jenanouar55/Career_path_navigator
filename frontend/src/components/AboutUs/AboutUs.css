@@ -4,6 +4,7 @@
 
 .aboutus .aboutus_header{
     text-align: center;
+    padding: 3% 0;
 }
 
 .aboutus .aboutus_header h1{
@@ -30,7 +31,8 @@
 }
 .aboutus_section .aboutus_text p{
     font-size: 1.5vw;
-    padding: 0 2%;
+    padding: 2%;
+    font-weight: 500;
 }
 
 .aboutus_section .aboutus_text a{

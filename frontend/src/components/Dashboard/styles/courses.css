@@ -1,0 +1,42 @@
+.course-list-container .course-list .course-list-item{
+    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    margin: 2vw 0;
+    border-radius: 20px;
+    /* padding: 3%; */
+    padding: 0 20%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4vw;
+    align-items: center;
+    font-size: 1.2vw;
+    
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .course-list-container {
+        /* border: 2px solid red; */
+        margin-top: 30vw;
+    }
+    .course-list-container .course-list .course-list-item{
+        
+        border-radius: 10px;
+        /* padding: 3%; */
+        padding: 1vw 10vw;
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+        font-size: 1.5vw;
+        /* width: 100%;
+        max-width: 50vw; */
+        
+    }
+
+    .course-list-container .course-list .course-list-item .course-title h4{
+        margin: 0;
+        
+    }
+    .course-list-container .course-list .course-list-item .course-title h2{
+        /* padding: 2vw 5vw;
+        margin: 0; */
+    }
+}

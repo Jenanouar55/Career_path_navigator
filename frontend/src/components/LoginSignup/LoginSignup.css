@@ -1,77 +1,30 @@
-.login-signup-body{
-    
+/* .login-signup-body{
     height: auto;
-    
-}
-
-/* .curve1{
-   background-color: rgba(184, 183, 183, 0.357);
-   width: 20%;
-   height: 35%;
-   z-index: -1;
-   border-radius: 50%;
-   position: absolute;
-   right: -4%;
-   top: 6%;
-}
-
-.curve2{
-    background-color: rgba(187, 52, 187, 0.829);
-    width: 20%;
-   height: 35%;
-   border-radius: 50%;
-   position: absolute;
-   right: -6%;
-   top: 3%;
-   z-index: -1;
 } */
 
-/* .curve3{
-    background-color: rgba(184, 183, 183, 0.357);
-   width: 17%;
-   height: 23%;
-   z-index: -1;
-   border-radius: 50%;
-   position: absolute;
-   top: 68vw;
-   right: 90%;
-}
 
-.curve4{
-    background-color: rgb(187, 52, 187);
-    width: 15%;
-   height: 22%;
-   border-radius: 50%;
-   position: absolute;
-   bottom: 0;
-   top: 112%;
-   z-index: -1;
-   
-   left: -5%;
-} */
+.login-signup-container{
 
-.container{
-
-    width: 30%;
-    height: 60vh;
+    width: 30vw;
+    height: 70vh;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
   text-align: center;
   margin: 10% auto;
-  padding: 5% 3%;
+  padding: 2% 3% 15vw;
 }
 
-.container .header{
+.login-signup-container .header{
     padding:  0;
     color: rgba(187, 52, 187, 0.829);
 }
 
-.container .header .header_text{
+.login-signup-container .header .header_text{
     font-size: 150%;
     font-weight: 900;
 }
 
-.container .header .underline{
+.login-signup-container .header .underline{
     border-bottom: 7px solid rgba(187, 52, 187, 0.829);
     border-radius: 10px;
     margin: 1vh auto 2vh;
@@ -79,14 +32,14 @@
     width: 40%;
 }
 
-.container .inputs .input{
-    padding: 4%;
+.login-signup-container .inputs .input{
+    padding: 6%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.container .inputs .input input{
+.login-signup-container .inputs .input input{
     padding: 3% 10%;
     text-align: left;
     margin: 2% 0;
@@ -158,14 +111,14 @@
     .curve1, .curve2, .curve3, .curve4{
         display: none;
     }
-    .container{
+    .login-signup-container{
         height: auto;
         width: auto;
         margin: 8vw;
     }
       
     
-    /* .container .inputs .input input{
+    /* .login-signup-container .inputs .input input{
         padding: 3% 10vw;
         margin: 0 1vw;
         /* width: 50vw; */

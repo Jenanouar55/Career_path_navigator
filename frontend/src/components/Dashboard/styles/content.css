@@ -1,14 +1,28 @@
 .dashboard-content {
-    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    /* box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black; */
+    background-color: aliceblue;
+    /* max-width: 40vw; */
+    height: 100%;
+    /* padding: 2% 0; */
     
-    height: 100vh;
 }
 
 .dashboard-content h3 {
-    padding: 40vh 10vw 0 6vw;
+    /* padding: 40vh 10vw 0 6vw; */
     font-size: 2vw;
     width: 100%;
-    
+    margin: 10vw;
     color: red;
     
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .dashboard-content {
+        /* width: 94vw; */
+        height: auto;
+        margin: 32vw 0;
+       
+        /* padding: 0.5% 0; */
+    }
+
 }

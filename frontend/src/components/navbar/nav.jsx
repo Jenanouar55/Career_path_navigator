@@ -26,7 +26,7 @@ const handleSignIn = () => {
                 
                 <Link to="/">Home</Link>
                 <Link to="/AboutUs">About Us</Link>
-                <Link to="/Services">Services</Link>
+                
                 <Link to="/ContactUs">Contact Us</Link>
 
                 {/* if signed in successfully display a Log Out button*/}
