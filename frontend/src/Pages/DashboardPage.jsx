@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Dashboardpage.css'
 import Sidebar from '../components/Dashboard/sidebar'
 import Content from '../components/Dashboard/content'
@@ -12,7 +12,24 @@ const DashboardPage = () => {
   const location = useLocation()
   const information = location.state?.information || [];
 
+    const [courses, setCourses] = useState([]);
+
+    const handleSetCourse  = (item) => {
+     const courseAdded= courses.some((course) => (course.id === item.id))
+    if (courseAdded){
+      alert('Course already Added')
+    }else {
+      setCourses((prev) => ([...prev, item]))
+    }
+  }
+
+  const handleRemoveCourse = (item) => {
+    setCourses((prev) => prev.filter((course) => course.id !== item.id))
+  }
+
   return (
+
+      
 
       <section className='dashboard'>
         <Sidebar className='sidebar'/>
@@ -20,13 +37,13 @@ const DashboardPage = () => {
 
         <section className='content'>
           <section className="dashboard-content">
-            <Content information={information}/>
+            <Content information={information} handleAddCourse={handleSetCourse} />
         </section>
 
         <section className="dashboard-profile">
             <Profile className='profile'/>
             {/* <Calendar /> */}
-            <Courses />
+            <Courses courses={courses} removeCourse={(handleRemoveCourse)}/>
         </section>
           
         </section>

@@ -5,18 +5,12 @@ import Card from './card'
 import Bookmark from './bookmark'
 import { recommendations } from './recommendations'
 
-const Content = ({ information }) => {
+const Content = ({ information, handleAddCourse}) => {
 
   const [bookmarks, setBookmarks] = useState([])
   
   const subInterest = information[4]
   const resource = recommendations[subInterest]
-
-  // if (!resource || !Array.isArray(resource)) {
-  //   return (
-  //     <div className="dashboard-content"><h3>No Resource Available</h3></div>
-  //   )
-  // }
 
   const handleBookMarks = (item) => {
     const isBookmarked =  bookmarks.some((bookmark) => bookmark.id === item.id);
@@ -41,7 +35,7 @@ const Content = ({ information }) => {
       ) : (
         <>
           <Bookmark bookmarks={bookmarks} onRemoveBookmark={handleRemoveBookmark}/>
-          <Card information={information} onBookMark={handleBookMarks} />
+          <Card information={information} onBookMark={handleBookMarks} onAddCourse={handleAddCourse}/>
         </>
       )}
       

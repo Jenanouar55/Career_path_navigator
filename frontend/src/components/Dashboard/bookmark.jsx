@@ -12,7 +12,7 @@ const Bookmark = ({bookmarks, onRemoveBookmark}) => {
         <div className="bookmark-list">
             {bookmarks.length > 0 ? (
                 bookmarks.map((item, index) => (
-                    <div className="bookmark-item">
+                    <div className="bookmark-item" key={index}>
                         <span className="bookmark-icon">
                             <BiBookBookmark />
                         </span>

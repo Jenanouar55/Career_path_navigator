@@ -3,13 +3,42 @@
     margin: 2vw 0;
     border-radius: 20px;
     /* padding: 3%; */
-    padding: 0 20%;
+    padding: 3% 8%;
     display: flex;
-    justify-content: flex-start;
-    gap: 4vw;
     align-items: center;
-    font-size: 1.2vw;
+    justify-content: space-between;
+    /* gap: 2vw; */
+    align-items: center;
+    font-size: 1vw;
     
+}
+
+.course-list-container .course-list .course-list-item:hover{
+    cursor: pointer;
+}
+
+.course-list-container .course-list .course-list-item h2{
+    font-size: 1.1vw;
+    white-space: nowrap;
+}
+
+.course-list-container .course-list .course-list-item .course-detail{
+        font-weight: 600;
+        font-size: 1.5vw;
+        color: black;
+        padding: 0.2vw 1vw;
+        transition: 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.course-list-container .course-list .course-list-item .course-detail:hover{
+    background-color: rgba(187, 52, 187, 0.829);
+     border-radius: 50px;
+     padding: 0.2vw 1vw;
+     transform: scale(1.2);
+     text-align: center;
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -21,22 +50,26 @@
         
         border-radius: 10px;
         /* padding: 3%; */
-        padding: 1vw 10vw;
+        padding: 1.5vw;
         display: flex;
-        gap: 1vw;
-        align-items: center;
-        font-size: 1.5vw;
+        justify-content: space-between;
+        /* gap: 1vw; */
+        /* align-items: center; */
+        /* font-size: 2vw; */
         /* width: 100%;
         max-width: 50vw; */
         
+    }
+
+    .course-list-container .course-list .course-list-item h2{
+        font-size: 1.5vw;
+        white-space: nowrap;
+        margin: 0 1vw;
     }
 
     .course-list-container .course-list .course-list-item .course-title h4{
         margin: 0;
         
     }
-    .course-list-container .course-list .course-list-item .course-title h2{
-        /* padding: 2vw 5vw;
-        margin: 0; */
-    }
+
 }

@@ -35,25 +35,21 @@
 
 .card .action-button {
     display: flex;
-    padding: 2%;
-    justify-content: space-around;
-    align-items: center;
     text-align: center;
-    font-size: 4vw;
-    margin: auto 0;
-    
+    font-size: 2.5vw;
 }
 .card .action-button .icon {
     border: 2px solid rgb(19, 18, 18);
     padding: 2%;
     border-radius: 50px;
     transition: 0.5s ease;
+    margin: 1vw 2vw;
 }
 
 .card .action-button .icon:hover {
     background-color: rgba(187, 52, 187, 0.829);
-    border: 2px solid #ccc;
-    transform: scale(0.5);
+    border: none;
+    transform: scale(1.2);
 }
 .card:hover {
     cursor: pointer;
@@ -69,17 +65,16 @@
 
 
 .card .card-title h1 {
-    font-size: 1.5vw;
+    font-size: 1vw;
     white-space-collapse: none;
     text-align: center;
     margin: 0;
 }
 
 .card .card-excerpt p {
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-align: center;
-    
-    width: 100%;
+    margin-bottom: 1%;
     
 }
 
