@@ -26,17 +26,17 @@ const sidebar = () => {
                             </Link>
                         </p>
     
-                        <p><Link to='/'> 
+                        <p><Link to='/ConstructionPage'> 
                         <FontAwesomeIcon icon={faHeart} className='icon'/>Interests</Link></p>
  
-                        <p><Link to='/'> <FontAwesomeIcon icon={faBook} className='icon'/>
+                        <p><Link to='/ConstructionPage'> <FontAwesomeIcon icon={faBook} className='icon'/>
                         Courses</Link></p>
     
-                        <p><Link to='/'>
+                        <p><Link to='/ConstructionPage'>
                         <FontAwesomeIcon icon={faCog} className='icon'/>
                         Settings</Link></p>
                         
-                        <p><Link to='/'>
+                        <p><Link to='/ConstructionPage'>
                         <FontAwesomeIcon icon={faHandsHelping} className='icon'/>
                         Help</Link></p>
                         

@@ -12,6 +12,7 @@ import LoginSignupPage from "./Pages/LoginSignupPage";
 import DashboardPage from "./Pages/DashboardPage";
 import InterestFormPage from "./Pages/InterestFormPage";
 import EditProfile from "./components/editProfile/editProfile";
+import Constructionpage from "./Pages/constructionpage";
 
 const AppContent = () => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const AppContent = () => {
             <Route path="/Interests" exact element={<InterestFormPage />} />
             <Route path="/Dashboard" element= {<DashboardPage/>} />
             <Route path="/EditProfile" element= {<EditProfile/>} />
+            <Route path="/ConstructionPage" element= {<Constructionpage />} />
         </Routes>
 
         {location.pathname !== '/Dashboard' && <Footer />}
