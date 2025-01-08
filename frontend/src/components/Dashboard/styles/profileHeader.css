@@ -1,0 +1,31 @@
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15vw;
+    padding: 1.5vw 2vw;
+    
+    
+}
+
+.profile-header h1 {
+    font-size: 1.5vw;
+    color: rgba(187, 52, 187, 0.829);
+    margin: 1% 0 0 1%;
+}
+.profile-header a {
+    text-decoration: none;
+}
+
+.profile-header .edit-icon {
+    font-size: 1.8vw;
+    background-color: #272829;
+    padding: 0.5vw 0.5vw 0;
+    color: #dde6ed;
+    border-radius: 5px;
+    margin: 1vw;
+}
+.profile-header .edit-icon:hover {
+    background-color: rgba(187, 52, 187, 0.829);
+    cursor: pointer;
+}

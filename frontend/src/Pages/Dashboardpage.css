@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+    gap: 3vw;
+    position: absolute;
+    left: 20vw;
+}
+
+@media (min-width:300px) and (max-width: 768px){
+    .content {
+        left: 32vw;
+        
+    }
+}
