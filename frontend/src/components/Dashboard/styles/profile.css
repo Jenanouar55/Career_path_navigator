@@ -40,7 +40,9 @@
         width: 70vw;
         position: absolute;
         top: 2vw;
-        margin-right: 33vw;
+        left: -55vw;
+        /* margin-right: 33vw; */
+        
     }
     .user-profile h3,
 .user-profile h4 {

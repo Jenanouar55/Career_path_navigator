@@ -21,6 +21,8 @@ const LoginSignup = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const navigate = useNavigate();
+
   // Handle form input changes
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -34,6 +36,8 @@ const LoginSignup = () => {
     if (!formData.email || !formData.password || (action === "Sign Up" && !formData.name)) {
       setError("Please fill in all required fields.");
       return;
+    } else {
+      navigate('/EditProfile')
     }
 
     try {
@@ -56,11 +60,7 @@ const LoginSignup = () => {
       setError(error.response?.data?.message || "Something went wrong. Please try again.");
     }
   };
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    navigate('/EditProfile')
-  }
+  
 
   return (
      <div className="login-signup-body">
@@ -81,6 +81,7 @@ const LoginSignup = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
+                required
               />
             </div>
           )}
@@ -93,6 +94,7 @@ const LoginSignup = () => {
               placeholder="Email"
               value={formData.email}
               onChange={handleInputChange}
+              required
             />
           </div>
 
@@ -104,6 +106,7 @@ const LoginSignup = () => {
               placeholder="Password"
               value={formData.password}
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
@@ -119,7 +122,7 @@ const LoginSignup = () => {
 
         {/* Submit Buttons */}
         <div className="submit-container">
-          <button className="submit-btn" onClick={handleNavigation}>
+          <button className="submit-btn" onClick={handleSubmit}>
             {action}
           </button>
         </div>

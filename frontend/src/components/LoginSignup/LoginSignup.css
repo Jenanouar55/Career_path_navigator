@@ -106,6 +106,13 @@
     background-color: #ccc;
     color: rgb(53, 53, 53);
 }
+.error-message{
+    color: red;
+}
+
+.success-message{
+    color: green;
+}
 
 @media (max-width: 768px){
     .curve1, .curve2, .curve3, .curve4{
@@ -117,17 +124,5 @@
         margin: 8vw;
     }
       
-    
-    /* .login-signup-container .inputs .input input{
-        padding: 3% 10vw;
-        margin: 0 1vw;
-        /* width: 50vw; */
-        /* height: 4vh; */
-       /* border: none;
-        outline: none;
-        color: transparent;
-        background-color: #ccc;
-    }
-     */
 }
 

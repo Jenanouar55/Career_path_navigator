@@ -40,7 +40,7 @@
 }
 .card .action-button .icon {
     border: 2px solid rgb(19, 18, 18);
-    padding: 2%;
+    /* padding: 2%; */
     border-radius: 50px;
     transition: 0.5s ease;
     margin: 1vw 2vw;
@@ -127,6 +127,12 @@
         color: black;
         font-size: 2vw;
         
+    }
+
+    .card .action-button {
+        display: flex;
+        text-align: center;
+        font-size: 5vw;
     }
     
 }
