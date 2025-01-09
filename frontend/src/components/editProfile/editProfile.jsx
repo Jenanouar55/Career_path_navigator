@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './editProfile.css'
 import { useNavigate } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
 
 const EditProfile = () => {
     
@@ -20,18 +19,7 @@ const EditProfile = () => {
     const handleInputChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
     }
-    // const [firstName, setFirstName] = useState('')
-
-    // const onFirstNameChange = (e) => {
-    //     setFirstName(e.target.value)
-    //     console.log(e.target.value)
-    // }
-
-    // const [email, setEmail] = useState('')
-    // const onEmailChange = (e) => {
-    //     setEmail(e.target.value)
-    //     console.log(e.target.value)
-    // }
+    
 
     const handleSubmit = (e) => {
         e.preventDefault()

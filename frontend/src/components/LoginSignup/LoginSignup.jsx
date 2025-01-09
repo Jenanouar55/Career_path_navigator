@@ -111,11 +111,11 @@ const LoginSignup = () => {
           </div>
         </div>
 
-        {action === "Login" && (
+        {/* {action === "Login" && (
           <div className="forgot-password">
             Forgot Password? <a href="">Click Here</a>
           </div>
-        )}
+        )} */}
 
         {error && <div className="error-message">{error}</div>}
         {success && <div className="success-message">{success}</div>}

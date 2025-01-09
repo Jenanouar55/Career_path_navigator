@@ -13,6 +13,7 @@ import DashboardPage from "./Pages/DashboardPage";
 import InterestFormPage from "./Pages/InterestFormPage";
 import EditProfile from "./components/editProfile/editProfile";
 import Constructionpage from "./Pages/constructionpage";
+import IsSuccessPage from "./Pages/isSuccessPage";
 
 const AppContent = () => {
   const location = useLocation();
@@ -25,7 +26,8 @@ const AppContent = () => {
             <Route path="/" exact element= {<HomePage />}/>
             <Route path="/AboutUs" exact element= {<AboutUspage />} />
             <Route path="/ContactUs" exact element= {<ContactUspage />}/>
-            {/* <Route path="/Login" exact element= {<LoginSignupPage/>}/> */}
+            <Route path="/isSuccess" element= {<IsSuccessPage />} />
+            
 
             <Route
             path="/Signin"

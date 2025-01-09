@@ -1,0 +1,25 @@
+.popup{
+    padding: 10vw 32vw;
+}
+
+.popup .popup-container{
+    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.popup .popup-container .popup-icon{
+    border: 5px solid green;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.popup .popup-container .popup-icon .check-icon{
+    color: green;
+    font-size: 7vw;
+}

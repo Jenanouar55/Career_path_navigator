@@ -1,5 +1,5 @@
 import React from 'react'
-import Construction from '../construction/construction'
+import Construction from '../components/construction/construction'
 
 const constructionpage = () => {
   return (
