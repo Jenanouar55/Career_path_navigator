@@ -37,7 +37,11 @@ const LoginSignup = () => {
       setError("Please fill in all required fields.");
       return;
     } else {
-      navigate('/EditProfile')
+      if (action === "Sign Up") {
+      navigate('/EditProfile') 
+      } else if (action === 'Login') {
+        navigate('/Dashboard')
+      }
     }
 
     try {
