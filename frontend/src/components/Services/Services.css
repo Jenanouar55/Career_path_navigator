@@ -7,12 +7,9 @@
     
 }
 
-.services .header_services{
-    
-    color: white;
-}
 
 .services .header_services h1{
+    color: white;
     margin-bottom: 0;
     font-size: 5vw;
 }
@@ -41,10 +38,39 @@
     padding: 1%;
     transition: background-color 1s ease-in-out;
     font-size: 1.5vw;
+    cursor: pointer;
 }
 
-.services .services_section h5:hover{
-    cursor: pointer;
+.services .services_section .purple{
+    
     background-color:  rgba(187, 52, 187, 0.829);
 
+}
+
+@media (min-width:300px) and (max-width: 768px) {
+
+    .services .header_services {
+        padding: 4vw 0;
+    }
+
+    .services .header_services h1{
+        font-size: 6vw;
+        
+    }
+    .services .header_services h4{
+        font-size: 3vw;
+    }
+    
+    .services .services_section{
+        gap: 5vw;
+    }
+    
+    .services .services_section h5{
+        flex-basis: 30%;
+        background-color: white;
+        font-size: 3vw;
+        white-space: nowrap;
+        padding: 2vw;
+        width: 40vw;
+    }
 }
