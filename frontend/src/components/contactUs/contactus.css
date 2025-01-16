@@ -6,8 +6,8 @@
     height: 70vh;
     position: relative;
     bottom: 0;
-    padding-bottom: 250px;
-    padding-top: 150px;
+    
+    
     
 }
 
@@ -36,6 +36,8 @@
     font-size: 2vw;
     margin-top: 0;
     color: rgba(187, 52, 187, 0.829);
+    font-weight: 800;
+    margin-bottom: 2vw;
 }
 
 .contact_us .contact_us_text p{
@@ -47,9 +49,12 @@
     text-decoration: none;
     font-size: 2vw;
     color: rgb(19, 18, 18);
-    padding: 2%;
-    width: 50%;
-    margin-left: 23%;
+    padding: 2% 0;
+    width: 100;
+    text-align: center;
+    margin: 0 5vw;
+    margin-top: 2vw;
+    
 }
 
 .contact_us .contact_us_text a:hover{
@@ -57,4 +62,36 @@
     padding: 2%;
     border-radius: 10px;
     color: white;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .contact_us .contact_us_text{
+        width: 40%;
+        padding: 5%;
+    }
+    
+    .contact_us .contact_us_text h1{
+        font-size: 4vw;
+    }
+    
+    .contact_us .contact_us_text h4{
+        font-size: 2.5vw;
+        
+    }
+    
+    .contact_us .contact_us_text p{
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    
+    .contact_us .contact_us_text a{
+        font-size: 3vw;
+        white-space: nowrap;
+        padding: 2vw;
+    }
+
+    .contact_us .contact_us_text a:hover{background-color: rgba(187, 52, 187, 0.829);
+        padding: 2vw;
+        border-radius: 5px;
+    }
 }
