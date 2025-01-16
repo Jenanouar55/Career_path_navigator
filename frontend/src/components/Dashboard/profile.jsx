@@ -20,7 +20,7 @@ const Profile = () => {
             <BiUser className='icon'/>
           </div>
           <h3 className="username">{userInfo[0]}</h3>
-          <h4 className="interests">{information[4]}/{information[4]}</h4>
+          <h4 className="interests">{information[4]}</h4>
           
 
         </div>
