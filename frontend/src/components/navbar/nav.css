@@ -80,6 +80,7 @@
     background-color: transparent;
     border: none;
     font-size: 1.5vw;
+    font-weight: 600;
    }
 
    .log-out:hover{
@@ -163,7 +164,10 @@
       background: rgba(187, 52, 187, 0.829);
       border-radius: 10px;
      }
-    
+
+     .log-out {
+      font-size: 3.5vw;
+     }
       
    }
    

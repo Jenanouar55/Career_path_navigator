@@ -9,7 +9,7 @@
 }
 
 .hero_section .hero_img img{
-    max-width: 50vw;
+    width: 50vw;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -31,4 +31,31 @@
 
 .hero_section .hero_text p{
     font-size: 2vw;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .hero_section{
+        height: 35vh;
+        gap: 10%;
+        position: relative;
+        padding: 10vw 0;
+    }
+    
+    .hero_section .hero_img img{
+       width: 70vw;
+    }
+
+    .hero_section .hero_text{
+        margin-top: 14vw;
+        padding: 0 2vw;
+    }
+
+    .hero_section .hero_text h1{
+        font-size: 4vw;
+        padding-top: 0;
+        margin: 0;
+    }
+    .hero_section .hero_text p{
+        font-size: 2.5vw;
+    }
 }

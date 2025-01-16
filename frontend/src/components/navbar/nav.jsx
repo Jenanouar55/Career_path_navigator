@@ -55,16 +55,16 @@ const handleSignIn = () => {
                                                                 (<FaBars onClick={() => setIsMobileOpen(true)}/>)}
                 {isMobileOpen && 
                                <div data-aos='fade-down' className='mobile-menu'>
-                                    <Link data-aos='fade-up' to="/">Home</Link>
-                                    <Link data-aos='fade-up' to="/AboutUs">About Us</Link>
-                                    <Link data-aos='fade-up' to="/ContactUs">Contact Us</Link>
+                                    <Link data-aos='fade-up' to="/" onClick={() => setIsMobileOpen(false)}>Home</Link>
+                                    <Link data-aos='fade-up' to="/AboutUs" onClick={() => setIsMobileOpen(false)}>About Us</Link>
+                                    <Link data-aos='fade-up' to="/ContactUs" onClick={() => setIsMobileOpen(false)}>Contact Us</Link>
                                     
                                     {/* if signed in successfully display a Log Out button*/}
                                     
                                     {isAuthenticated ? (
-                                        <Link to="/" onClick={handleLogOut} ><button className='log-out'>Log Out</button></Link>
+                                        <Link to="/" onClick={() =>{handleLogOut(); setIsMobileOpen(false)}} ><button className='log-out'>LogOut</button></Link>
                                         ) : (
-                                        <Link to="/Signin" onClick={handleSignIn} state={{action:"Sign Up"}}>Sign In</Link>
+                                        <Link to="/Signin" onClick={() => {handleSignIn(); setIsMobileOpen(false);}} state={{action:"Sign Up"}}>Sign In</Link>
                                     )}
                                </div> }
             </div>
