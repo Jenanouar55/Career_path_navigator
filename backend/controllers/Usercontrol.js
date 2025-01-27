@@ -1,4 +1,4 @@
-import * as UserCrud from '../services/userCrud'; // Import CRUD operations
+import * as UserCrud from '../services/userCrud.js'; // Import CRUD operations
 
 // Create a new user (signup)
 export const createUser = async (req, res) => {
