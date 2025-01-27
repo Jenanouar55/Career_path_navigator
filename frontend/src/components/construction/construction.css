@@ -1,0 +1,44 @@
+.construction{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.construction .construction-ui{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: yellow;
+    padding: 2vw;
+    
+}
+
+.construction .construction-ui .black-border{
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1vw;
+    padding: 5vw;
+    border-radius: 50px;
+}
+
+.construction .construction-ui .black-border h1
+{
+    font-weight: 900;
+    width: 100%;
+    font-size: 3vw;
+    white-space: nowrap;
+}
+/* .construction .construction-ui .black-border, p{
+    font-size: 1.5vw;
+    font-weight: 700;
+    white-space: nowrap;
+} */

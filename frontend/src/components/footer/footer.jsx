@@ -28,7 +28,7 @@ const Footer = () => {
           <h4>About</h4>
           <ul>
             <li><a href="#">Company</a></li>
-            <li><a href="AboutUspage.jsx#t-section">Team</a></li>
+            <li><a href="/AboutUs">Team</a></li>
             <li><a href="#">Careers</a></li>
           </ul>
         </div>

@@ -21,6 +21,8 @@ const LoginSignup = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const navigate = useNavigate();
+
   // Handle form input changes
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -34,6 +36,12 @@ const LoginSignup = () => {
     if (!formData.email || !formData.password || (action === "Sign Up" && !formData.name)) {
       setError("Please fill in all required fields.");
       return;
+    } else {
+      if (action === "Sign Up") {
+      navigate('/EditProfile') 
+      } else if (action === 'Login') {
+        navigate('/Dashboard')
+      }
     }
 
     try {
@@ -56,19 +64,12 @@ const LoginSignup = () => {
       setError(error.response?.data?.message || "Something went wrong. Please try again.");
     }
   };
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    
-    navigate('/EditProfile')
-  }
+  
 
   return (
      <div className="login-signup-body">
-       {/* <div className="curve1"></div>
-       <div className="curve2"></div> */}
 
-      <div className="container">
+      <div className="login-signup-container">
         <div className="header">
           <div className="header_text">{action}</div>
           <div className="underline"></div>
@@ -84,6 +85,7 @@ const LoginSignup = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
+                required
               />
             </div>
           )}
@@ -96,6 +98,7 @@ const LoginSignup = () => {
               placeholder="Email"
               value={formData.email}
               onChange={handleInputChange}
+              required
             />
           </div>
 
@@ -107,22 +110,23 @@ const LoginSignup = () => {
               placeholder="Password"
               value={formData.password}
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
 
-        {action === "Login" && (
+        {/* {action === "Login" && (
           <div className="forgot-password">
             Forgot Password? <a href="">Click Here</a>
           </div>
-        )}
+        )} */}
 
         {error && <div className="error-message">{error}</div>}
         {success && <div className="success-message">{success}</div>}
 
         {/* Submit Buttons */}
         <div className="submit-container">
-          <button className="submit-btn" onClick={handleNavigation}>
+          <button className="submit-btn" onClick={handleSubmit}>
             {action}
           </button>
         </div>
@@ -135,8 +139,6 @@ const LoginSignup = () => {
         </div>
       </div>
 
-      {/* <div className="curve3"></div>
-      <div className="curve4"></div> */}
     </div>
   );
 };

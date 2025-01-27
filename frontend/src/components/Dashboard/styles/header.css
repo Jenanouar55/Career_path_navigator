@@ -2,30 +2,22 @@
     font-size: 2vw;
     color: rgb(19, 18, 18);
     margin-left: 2%;
-    
-    font-weight: 600;
+    padding: 5% 2% 1%;
+    font-weight: 700;
     border-bottom: 5px solid rgba(187, 52, 187, 0.829);
-    border-radius: 5px;
-    
+    border-radius: 10px;
+    margin: 2vw 0;
 }
 
-.dashboard-header {
+ .dashboard-header {
     display: flex;
-
-    gap: 60%;
-    position: relative;
 }
 
-.dashboard-header .icon-border {
-    border: 3px solid black;
-    border-radius: 50px;
-    position: absolute;
-    right: 0;
-    top: 20%;
-}
-
-.dashboard-header .icon {
-    font-size: 3vw;
-    padding: 2px;
-    
+@media (min-width: 300px) and (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 3vw;
+        margin-top: -30vw;
+        /* border-bottom: 3px solid rgba(187, 52, 187, 0.829); */
+        border-bottom: none;
+    }
 }

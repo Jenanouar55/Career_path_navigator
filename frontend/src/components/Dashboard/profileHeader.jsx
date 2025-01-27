@@ -8,7 +8,7 @@ const profileHeader = () => {
     <div className="profile-header">
         <h1>Profile</h1>
 
-        <Link to='/EditProfile'>
+        <Link to='/ConstructionPage'>
           <span className='edit-icon'><BiEdit /></span>
         </Link>
         

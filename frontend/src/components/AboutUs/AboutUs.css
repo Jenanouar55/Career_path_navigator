@@ -4,6 +4,7 @@
 
 .aboutus .aboutus_header{
     text-align: center;
+    padding: 3% 0;
 }
 
 .aboutus .aboutus_header h1{
@@ -12,7 +13,7 @@
 }
 
 .aboutus .aboutus_header h5{
-    font-size: 2vw;
+    font-size: 3vw;
     margin-top: 0;
     color: rgba(187, 52, 187, 0.829);
 }
@@ -30,7 +31,8 @@
 }
 .aboutus_section .aboutus_text p{
     font-size: 1.5vw;
-    padding: 0 2%;
+    padding: 2%;
+    font-weight: 500;
 }
 
 .aboutus_section .aboutus_text a{
@@ -50,4 +52,32 @@
 
 .aboutus_section .aboutus_text a:hover{
     background-color: rgba(187, 52, 187, 0.637);
+}
+
+@media (min-width: 300px) and (max-width: 768px){
+
+    .aboutus_section img{
+        margin-top: 4vw;
+        height: 90%;
+    }
+
+    .aboutus{
+        padding: 9vw 7vw;
+    }
+
+    
+    .aboutus_section .aboutus_text p{
+        font-size: 2.5vw;
+        text-align: center;
+        width: 110%;
+        margin-bottom: 2vw;
+    }
+    
+    .aboutus_section .aboutus_text a{
+        padding: 4.5%;
+        font-size: 3vw;
+        bottom: -6vw;
+        left: 8vw;
+        margin: -1.5vw 0;
+    }
 }

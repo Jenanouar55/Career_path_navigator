@@ -11,11 +11,11 @@ const Services = () => {
 
         <div className='services_section'>
             <h5>Career Recommendations</h5>
-            <h5>Skill Assessment</h5>
+            <h5 className='purple'>Skill Assessment</h5>
             <h5>Learning Resources</h5>
-            <h5>Scholarship Finder</h5>
+            <h5 className='purple'>Scholarship Finder</h5>
             <h5>Career Roadmaps</h5>
-            <h5>Job Search Assistant</h5>
+            <h5 className='purple'>Job Search Assistant</h5>
         </div>
     </div>
   )

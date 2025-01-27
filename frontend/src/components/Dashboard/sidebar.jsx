@@ -8,7 +8,7 @@ import { faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 
 const sidebar = () => {
   return (
-    <section className="sidebar">
+    <section className="sidebar headerbar">
             <aside>
                 <nav className='aside_nav'>
     
@@ -26,19 +26,41 @@ const sidebar = () => {
                             </Link>
                         </p>
     
-                        <p><Link to='/'> 
+                        <p><Link to='/ConstructionPage'> 
                         <FontAwesomeIcon icon={faHeart} className='icon'/>Interests</Link></p>
  
-                        <p><Link to='/'> <FontAwesomeIcon icon={faBook} className='icon'/>
+                        <p><Link to='/ConstructionPage'> <FontAwesomeIcon icon={faBook} className='icon'/>
                         Courses</Link></p>
     
-                        <p><Link to='/'>
+                        <p><Link to='/ConstructionPage'>
                         <FontAwesomeIcon icon={faCog} className='icon'/>
                         Settings</Link></p>
                         
-                        <p><Link to='/'>
+                        <p><Link to='/ConstructionPage'>
                         <FontAwesomeIcon icon={faHandsHelping} className='icon'/>
                         Help</Link></p>
+                        
+                    </div>
+
+                    <div className='sidebar-links-icons'>
+                        
+                        <p>
+                            <Link className='active'>
+                                <FontAwesomeIcon icon={faTachometerAlt} className='icon'/>
+                                
+                            </Link>
+                        </p>
+    
+                        <p><Link to='/'> 
+                        <FontAwesomeIcon icon={faHeart} className='icon'/></Link></p>
+ 
+                        <p><Link to='/'> <FontAwesomeIcon icon={faBook} className='icon'/>
+                    </Link></p>
+    
+                        
+                        <p><Link to='/'>
+                        <FontAwesomeIcon icon={faHandsHelping} className='icon'/>
+                        </Link></p>
                         
                     </div>
     

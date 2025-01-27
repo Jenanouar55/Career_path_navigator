@@ -3,74 +3,91 @@ import './editProfile.css'
 import { useNavigate } from 'react-router-dom'
 
 const EditProfile = () => {
-    const navigate = useNavigate()
-    const [firstName, setFirstName] = useState('')
-    const onFirstNameChange = (e) => {
-        setFirstName(e.target.value)
-    }
+    
 
-    const [email, setEmail] = useState('')
-    const onEmailChange = (e) => {
-        setEmail(e.target.value)
+    const navigate = useNavigate()
+    const [error, setError] = useState('')
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        address: '',
+        city: '',
+        state: '',
+
+    })
+    const handleInputChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value})
     }
+    
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        navigate('/Interests', {state: {userInfo: [firstName, email]}})
+        if (formData.firstName && formData.lastName && formData.email && formData.address) {
+            navigate('/Interests', {state: {userInfo:[formData.firstName, formData.email]}})
+        }else {
+            setError('Please fill out all required fields')
+        }
+        
     }
   return (
 
     
     <section className="profile-form">
         <form onSubmit={handleSubmit} >
-            <div className="profile-head">
+        <div className="profile-head">
             <h2>Edit Profile</h2>
             <div className="underline"></div>
-            </div>
+        </div>
             
             <div className='profile'>
+            
                 <div>
-                    <h5>First Name</h5>
+                <label htmlFor='first-name'>First Name</label>
                     <div className='profile_input'>
-                        <input type="text" id='first-name' value={firstName} onChange={onFirstNameChange}/>
+                        
+                        <input type="text" id='first-name' name='firstName' value={formData.firstName} onChange={handleInputChange}/>
                     </div>
                 </div>
 
                 <div>
-                    <h5>Last Name</h5>
+                    <label htmlFor='last-name'>Last Name</label>
                     <div className='profile_input'>
-                        <input type="text" id='last-name'/>
+                        
+                        <input type="text" id='last-name' name='lastName' value={formData.lastName} onChange={handleInputChange}/>
                     </div>
                 </div>
 
         
                 <div>
-                    <h5>Email</h5>
+                    <label htmlFor='email'>Email</label>
                     <div className='profile_input'>
-                        <input type="email"  id='email' value={email} onChange={onEmailChange}/>
+                        <input type="email"  id='email' name='email' value={formData.email} onChange={handleInputChange}/>
                     </div>
                 </div>
 
                 <div>
-                    <h5>Address</h5>
+                    <label htmlFor='address'>Address</label>
                     <div className='profile_input'>
-                        <input type="address" />
+                        <input type="address" id='address' name='address' value={formData.address} onChange={handleInputChange}/>
                     </div>
                 </div>
 
                 <div>
-                    <h5>City</h5>
+                    <label htmlFor='city'>City</label>
                     <div className='profile_input'>
-                        <input type="text" />
+                        <input type="text" id='city' name='city' value={formData.city} onChange={handleInputChange}/>
                     </div>
                 </div>
 
                 <div>
-                    <h5>State</h5>
+                    <label htmlFor='state'>State</label>
                     <div className='profile_input'>
-                        <input type="text" />
+                        <input type="text" id='state' name='state' value={formData.state} onChange={handleInputChange}/>
                     </div>
                 </div>
+                {error && <p style={{ color: 'red' }}>{error}</p>}
+                
             </div>
             <button className='submit' type='submit' onClick={handleSubmit}>Submit</button>
         </form>
