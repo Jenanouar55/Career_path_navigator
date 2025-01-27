@@ -1,11 +1,15 @@
-.profile{
+.profile-form .profile{
     display: flex;
     flex-wrap: wrap;
     gap: 4vw;
     align-items: center;
     justify-content: center;
-    padding: 2vw;
+    padding: 4vw;
+    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    margin: 0 4vw;
 }
+
+
 
  .profile_input{
     padding: 6% 15vw;
@@ -21,7 +25,7 @@
     left: 2%;
     bottom: 25%;
     padding: 1% 2%;
-    width: 25vw;
+    width: 30vw;
     border: none;
     outline: none;
     
@@ -50,8 +54,11 @@ input:-webkit-autofill {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 4vw;
 }
-
+.profile-form .profile-head h2{
+    padding: 1vw;
+}
 .profile-form .submit{
     /* background-color: rgba(187, 52, 187, 0.829); */
     background-color: gray;
@@ -70,4 +77,24 @@ input:-webkit-autofill {
 .profile-form .submit:hover{
     background-color: rgba(187, 52, 187, 0.829);
     cursor: pointer;
+}
+
+@media (min-width:300px) and (max-width: 768px){
+   .profile-form .profile {
+        flex-direction: column;
+    }
+
+    .profile_input{
+        padding: 2.5vw 30vw;
+        border-radius: 4px;
+    } 
+
+    .profile input{
+        font-size: 2.3vw;
+    }
+
+    .profile-form .submit{
+        font-size: 4vw;
+    }
+    
 }

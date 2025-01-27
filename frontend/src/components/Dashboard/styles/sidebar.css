@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    
-    
 }
 
 .sidebar .aside_nav{
@@ -14,18 +12,17 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 3vw;
+    gap: 2vw;
     position: fixed;
 }
 
 .sidebar .aside_nav .nav_image img {
     max-width: 35%;
-    margin-top: 2vw;
-    
-    
+    margin-top: 2vw;  
 }
 
-.sidebar .aside_nav .sidebar-links{
+.sidebar .aside_nav .sidebar-links,
+.sidebar .aside_nav .sidebar-links-icons{
     
     display: flex;
     flex-direction: column;
@@ -36,18 +33,18 @@
   
 
 .sidebar .aside_nav .sidebar-links p{
-    list-style: none;
     margin-top: 0;
-    padding: 0 2%;
-    display: flex;
+    /* padding: 0 1%; */
+    /* display: flex; */
+    
 }
 
-.sidebar .aside_nav .sidebar-links p a {
-    list-style: none;
-    color: #ccc;
+.sidebar .aside_nav .sidebar-links p a{
+    /* list-style: none;
+    color: #ccc; */
     font-weight: 600;
     text-decoration: none;
-    padding: 1vw 5.5vw 1vw 1vw;
+    padding: 1vw 2vw 1vw 1vw;
     display: flex;
     gap: 1vw;
     color: #dde6ed;
@@ -88,18 +85,61 @@
 .sidebar .logout a .icon{
     margin-top: 3%;
 }
+
+.sidebar .aside_nav .sidebar-links-icons{
+    display: none;
+}
+
+
+
 @media (min-width:300px) and (max-width: 768px) {
     
-    
+    .sidebar .aside_nav .sidebar-links-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ccc;
+        
+    }
+    .sidebar .aside_nav .sidebar-links-icons p{
+        margin: 5vw 0;
+    }
     
     .sidebar .aside_nav {
-        max-width: 28vw;
+        max-width: 30vw;
 }
     
+.sidebar .aside_nav .sidebar-links{
+    display: none;
+}
+
+.sidebar .aside_nav{
+    width: 18vw;
     
-   /* .sidebar .aside_nav .logout a{
-        font-size: 2vw;
-        margin-bottom: 5vw;
-    } */
+    padding: 0.5% ;
+    background-color: rgb(19, 18, 18);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    position: fixed;
+}
+
+.sidebar .aside_nav .sidebar-links-icons p a {
+   
+   
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1.5vw 2vw;
+    color: #dde6ed;
+    font-size: 5vw;
+}
+
+.sidebar .aside_nav .sidebar-links-icons p a:hover,
+.active {
+    background: rgba(187, 52, 187, 0.829);
+    border-radius: 40px;
     
+}
+   
 }

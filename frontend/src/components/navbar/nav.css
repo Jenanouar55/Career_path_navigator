@@ -40,7 +40,7 @@
     /* align-items: center;
     justify-content: space-between; */
     width: 100%;
-
+    /* border-bottom: 2px solid white; */
    }
 
    .header-navbar nav .nav_image img{
@@ -60,6 +60,7 @@
 
    .header-navbar nav .nav_text a{
     font-size: 1.5vw;
+    font-weight: 500;
     text-decoration: none;
     color: var(--text-color);
     transition: background-color 0.5s ease, transform 0.5s ease;
@@ -79,10 +80,94 @@
     background-color: transparent;
     border: none;
     font-size: 1.5vw;
+    font-weight: 600;
    }
 
    .log-out:hover{
     cursor: pointer;
    }
 
+   .header-navbar .mobile-nav {
+    display: none;
+   }
+
+
+   @media (min-width: 300px) and (max-width: 768px)  {
+    .header-navbar nav .nav_text{
+      display: none;
+     }
+
+     .header-navbar nav .mobile-nav {
+      display: flex;
+      flex-direction: column;
+
+     }
+     
+     .header-navbar nav .mobile-nav .mobile-nav-icon{
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      padding: 2vw 3vw;
+      color: white;
+      position: relative;
+      height: 10vw;
+      right: 2vw;
+      margin-top: 1px;
+      /* transition: border-radius 0.5s ease-in-out; */
+      /* transition: 0.5s ease-in; */
+     }
+
+     .header-navbar nav .mobile-nav .mobile-nav-icon:hover{
+      cursor: pointer;
+     }
+     
+     .header-navbar nav .mobile-nav .mobile-active {
+      /* background: rgba(187, 52, 187, 0.829); */
+      background-color: #fff;
+      font-size: 4vw;
+      color: #000;
+      font-weight: 700;
+      border-top-left-radius: 20px;
+      transition: border-radius 0.5s ease-in-out;
+     }
+
+     .header-navbar nav .mobile-nav .mobile-menu {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      top: 10vw;
+      right: 0.1vw;
+      z-index: 15;
+      /* border-top: 5px solid rgba(187, 52, 187, 0.829); */
+      border-bottom-right-radius: 20px;
+      
+     }
+
+     .header-navbar nav .mobile-nav .mobile-menu-open{
+      opacity: 1;
+      max-height: 500px;
+     }
+
+     .header-navbar nav .mobile-nav .mobile-menu a{
+      text-decoration: none;
+      color: black;
+      padding: 2vw 10vw;
+      text-align: center;
+      white-space: nowrap;
+      margin: 1.5vw 2vw;
+      border-radius: 3px;
+     }
+
+     .header-navbar nav .mobile-nav .mobile-menu a:hover{
+      background: rgba(187, 52, 187, 0.829);
+      border-radius: 10px;
+     }
+
+     .log-out {
+      font-size: 3.5vw;
+     }
+      
+   }
    

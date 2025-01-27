@@ -12,29 +12,23 @@ const AboutUs = () => {
 
         <div className="aboutus_section">
             <div className="aboutus_img">
-                <img src={about_image} alt="About Us Image" />
+                <img src={about_image} alt="About Us" />
             </div>
 
             <div className="aboutus_text">
                 <p>
-                Lorem ipsum, dolor sit amet consectetur 
-                adipisicing elit. Velit, officia obcaecati? 
-                Quia reprehenderit sit, eum eligendi fuga 
-                similique exercitationem totam, officiis 
-                illum voluptates fugit nesciunt, quam 
-                architecto repellendus fugiat laboriosam?
+                Welcome to Career Path Navigator, where innovation meets growth.
+                We are passionate about empowering individuals and organizations to reach their full potential 
+                through transformative learning and cutting-edge solutions.
                 </p>
 
                 <p>
-                Lorem ipsum, dolor sit amet consectetur 
-                adipisicing elit. Velit, officia obcaecati? 
-                Quia reprehenderit sit, eum eligendi fuga 
-                similique exercitationem totam, officiis 
-                illum voluptates fugit nesciunt, quam 
-                architecto repellendus fugiat laboriosam?
+                At Career Path Navigator, we specialize in providing high-quality educational resources, 
+                personalized recommendations, and a supportive community to help you achieve your goals. 
+                
                 </p>
                 
-                <a href="#">Learn More</a>
+                <a href="/AboutUs">Learn More</a>
             </div>
 
         </div>

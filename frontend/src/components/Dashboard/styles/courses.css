@@ -1,0 +1,92 @@
+.course-list-container .course-list .course-list-item,
+.no-courses{
+    box-shadow: 0 4px 8px 0 #ccc, 0 4px 8px 0 black;
+    
+    border-radius: 8px;
+    /* padding: 3%; */
+    padding: 3% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2vw; */
+    align-items: center;
+    /* font-size: 1vw; */
+    
+}
+.course-list-container .course-heading {
+    padding: 3vw 0;
+    font-size: 1.5vw;
+}
+.course-list-container .course-list .course-list-item:hover{
+    cursor: pointer;
+}
+
+.course-list-container .course-list .course-list-item h2{
+    font-size: 1.1vw;
+    white-space: nowrap;
+}
+
+.course-list-container .course-list .course-list-item .course-detail{
+        font-weight: 600;
+        font-size: 1.5vw;
+        color: black;
+        padding: 0.2vw 1vw;
+        transition: 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.course-list-container .course-list .course-list-item .course-detail:hover{
+    background-color: rgba(187, 52, 187, 0.829);
+     border-radius: 50px;
+     padding: 0.2vw 1vw;
+     transform: scale(1.2);
+     text-align: center;
+}
+
+.no-courses {
+    white-space: nowrap;
+    color: red;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .course-list-container .course-list .course-list-item,
+.no-courses{
+   padding: 2vw 3vw;
+
+    
+}
+.no-courses{
+    font-size: 2vw;
+}
+    .course-list-container {
+        /* border: 2px solid red; */
+        margin-top: 30vw;
+    }
+    .course-list-container .course-list .course-list-item{
+        
+        border-radius: 10px;
+        padding: 1.5vw;
+        display: flex;
+        justify-content: space-between;     
+    }
+
+    .course-list-container .course-list .course-list-item h2{
+        font-size: 2vw;
+        white-space: nowrap;
+        margin: 0 1vw;
+    }
+
+    .course-list-container .course-list .course-list-item h4 {
+        margin: 0;
+        font-size: 2vw;
+    }
+
+    .course-list-container .course-heading {
+        padding: 1vw;
+        font-size: 2.5vw;
+        white-space: nowrap;
+    }
+
+}
